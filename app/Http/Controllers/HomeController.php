@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Info;
 use App\Http\Requests;
 use Illuminate\Http\Request;
 
@@ -14,7 +15,51 @@ class HomeController extends Controller
     }
 
     public function index() {
+    	
+    	$total = Info::all()->count();
 
-    	return view('home');
+    	$chart_inc = [];
+    	$chart_inc['dm'] = Info::where('dm', '=', '')->get()->count();
+    	$chart_inc['policy'] = Info::where('policy', '=', '')->get()->count();
+    	$chart_inc['documents'] = Info::where('documents', '=', 'incomplete')->get()->count();
+
+    	$chart_complete = [];
+    	$chart_complete['dm'] = $total - $chart_inc['dm'];
+    	$chart_complete['policy'] = $total - $chart_inc['policy'];
+    	$chart_complete['documents'] = Info::where('documents', '=', 'complete')->get()->count();
+
+    	$stages = [];
+    	$stages['stage_1'] = Info::where('stage', '=', 1)->get()->count();
+    	$stages['stage_2'] = Info::where('stage', '=', 2)->get()->count();
+    	$stages['stage_3'] = Info::where('stage', '=', 3)->get()->count();
+    	$stages['stage_4'] = Info::where('stage', '=', 4)->get()->count();
+
+    	$stats = [];
+    	$stats['denied'] = Info::where('claim_status', '=', 'denied')->get()->count();
+    	$stats['approved'] = Info::where('claim_status', '=', 'approved')->get()->count();
+    	$stats['closed'] = Info::where('claim_status', '=', 'closed')->get()->count();
+    	$stats['pending'] = Info::where('claim_status', '=', 'pending')->get()->count();
+
+    	$months = [];
+    	$months['jan'] = Info::whereMonth('encoded', '=', '01')->get()->count();
+    	$months['feb'] = Info::whereMonth('encoded', '=', '02')->get()->count();
+    	$months['mar'] = Info::whereMonth('encoded', '=', '03')->get()->count();
+    	$months['apr'] = Info::whereMonth('encoded', '=', '04')->get()->count();
+    	$months['may'] = Info::whereMonth('encoded', '=', '05')->get()->count();
+    	$months['jun'] = Info::whereMonth('encoded', '=', '06')->get()->count();
+    	$months['jul'] = Info::whereMonth('encoded', '=', '07')->get()->count();
+    	$months['aug'] = Info::whereMonth('encoded', '=', '08')->get()->count();
+    	$months['sep'] = Info::whereMonth('encoded', '=', '09')->get()->count();
+    	$months['oct'] = Info::whereMonth('encoded', '=', '10')->get()->count();
+    	$months['nov'] = Info::whereMonth('encoded', '=', '11')->get()->count();
+    	$months['dec'] = Info::whereMonth('encoded', '=', '12')->get()->count();
+    	
+    	return view('home')
+    		->with('chart_inc', $chart_inc)
+    		->with('chart_complete', $chart_complete)
+    		->with('stages', $stages)
+    		->with('stats', $stats)
+    		->with('months', $months)
+    		->with('info', Info::orderBy('id', 'DESC')->get());
     }
 }

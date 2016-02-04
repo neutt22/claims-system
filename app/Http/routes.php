@@ -37,9 +37,3 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('/edit', 'HomeController@update_record');
 
 });
-
-// Route::group(['middleware' => 'web'], function () {
-//     Route::auth();
-
-//     Route::get('/home', 'HomeController@index');
-// });

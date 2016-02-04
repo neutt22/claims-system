@@ -4,7 +4,8 @@
 	google.load('visualization', '1.0', {'packages':['corechart']});
 	google.setOnLoadCallback(drawChart);
 
-	function drawChart() {
+	function drawChart(){
+
 		// DM stats
 		var data_dm = new google.visualization.DataTable();
 		data_dm.addColumn('string', 'DM');
@@ -99,6 +100,7 @@
 			'chartArea':{left:0, top:'15%'},
 		};
 
+		// Encoded status
 		var data_encoded = google.visualization.arrayToDataTable([
 	        ['Filed Claims', 'Filed Claims',],
 	        ['January', {{ $months['jan'] }}],
@@ -144,6 +146,5 @@
 
 		var chart_encoded = new google.visualization.BarChart(document.getElementById('chart_encoded'));
 		chart_encoded.draw(data_encoded, options_encoded);
-
 	}
 </script>
