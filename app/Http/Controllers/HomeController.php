@@ -62,4 +62,8 @@ class HomeController extends Controller
     		->with('months', $months)
     		->with('info', Info::orderBy('id', 'DESC')->get());
     }
+
+    public function new_record() {
+        return view('new_record');
+    }
 }
