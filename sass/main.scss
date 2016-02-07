@@ -5,6 +5,8 @@
 
 @import "compass";
 
+$theme_color: #0066cc;
+
 * {
 	box-sizing: border-box;
 	outline: none;
@@ -28,7 +30,7 @@ img#profile-pic {
 	display: block;
 	margin: 0 auto;
 	@include border-radius(50%);
-	border: 2px solid #0066cc;
+	border: 2px solid $theme_color;
 	width: 40%;
 	a:active {
 		display: none;
@@ -145,6 +147,10 @@ a#new-record {
 }
 
 /* STAGE 1 FORM ===================================*/
+
+.req {
+	border: 1px solid lighten(red, 35%);
+}
 
 form#stage-1 input {
 	margin-bottom: 10px;

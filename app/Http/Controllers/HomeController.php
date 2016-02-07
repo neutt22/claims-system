@@ -66,4 +66,8 @@ class HomeController extends Controller
     public function new_record() {
         return view('new_record');
     }
+
+    public function post_new_record() {
+        dd($this->request->all());
+    }
 }

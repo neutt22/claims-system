@@ -25,10 +25,10 @@
 	@endif
 
 	<form id="stage-1" action="/new" method="post">
-		<input type="text" name="name" placeholder="enter principal name..." />
-		<input type="text" name="claimant" placeholder="enter claimant name..." />
-		<input type="text" name="coc" placeholder="enter coc name..." />
-		<input type="text" name="inception" placeholder="enter inception date..." id="datepicker">
+		<input type="text" name="name" placeholder="enter principal name..." class="req" />
+		<input type="text" name="claimant" placeholder="enter claimant name..." class="req" />
+		<input type="text" name="coc" placeholder="enter coc name..." class="req" />
+		<input type="text" name="inception" placeholder="enter inception date..." id="datepicker" class="req">
 		<input type="text" name="dm" placeholder="enter dm name..." />
 		<input type="text" name="policy" placeholder="enter policy name..." />
 
