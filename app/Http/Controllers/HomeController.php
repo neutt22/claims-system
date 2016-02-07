@@ -68,6 +68,29 @@ class HomeController extends Controller
     }
 
     public function post_new_record() {
-        dd($this->request->all());
+
+        $this->validate($this->request,[
+            'name' => 'required',
+            'claimant' => 'required',
+            'coc' => 'required',
+            'inception' => 'required',
+        ]);
+
+        $info = new Info;
+        $info->name = $this->request->input('name');
+        $info->claimant = $this->request->input('claimant');
+        $info->coc = $this->request->input('coc');
+        $info->inception = \Carbon\Carbon::parse($this->request->input('inception'));
+        $info->documents = $this->request->input('docs');
+        $info->encoded = \Carbon\Carbon::now();
+        $info->amount = $this->request->input('amount');
+        $info->stage = 1;
+        $info->claim_status = 'pending';
+
+        if( $info->save() ) {
+            return view('new_record')->with('message', 'New item has been recorded.');
+        }else {
+            return 'Something went wrong recording, please contact master Jim from GIBX';
+        }
     }
 }
