@@ -50,7 +50,7 @@
 			['Stage 1', {{ $stages['stage_1'] }}],
 			['Stage 2', {{ $stages['stage_2'] }}],
 			['Stage 3', {{ $stages['stage_3'] }}],
-			['Stage 3', {{ $stages['stage_4'] }}],
+			['Stage 4', {{ $stages['stage_4'] }}],
 		]);
 
 		var options_stage = {
