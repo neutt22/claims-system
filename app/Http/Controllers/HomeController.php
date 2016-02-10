@@ -136,4 +136,9 @@ class HomeController extends Controller
             return 'Something went wrong recording, please contact master Jim from GIBX';
         }
     }
+
+    public function getLogout() {
+        \Auth::logout();
+        return redirect()->route('home');
+    }
 }

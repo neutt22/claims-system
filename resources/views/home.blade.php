@@ -17,7 +17,7 @@
         <li><a href="#">Reports</a></li>
         <li><a href="#">Settings</a></li>
         <li><hr style="margin: 0; border-top: 1px solid #d9d9d9; margin: 0 5px;"></li>
-        <li><a href="#">Log Out</a></li>
+        <li><a href="/logout">Log Out</a></li>
       </ul>
     </div>
     <h3>Claims System v.0.1</h3>

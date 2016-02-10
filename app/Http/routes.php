@@ -13,6 +13,8 @@
 
 Route::group(['middleware' => ['web']], function () {
 
+	Route::auth();
+
 	Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
 	Route::post('/new', 'HomeController@post_new_record');
@@ -20,7 +22,5 @@ Route::group(['middleware' => ['web']], function () {
 
 	Route::get('/new', 'HomeController@new_record');
 	Route::get('/edit', 'HomeController@update_record');
+	Route::get('/logout', 'HomeController@getLogout');
 });
-
-Route::get('/login', ['as' => 'getLogin', 'uses' => 'UserController@getLogin']);
-Route::post('/login', ['as' => 'postLogin', 'uses' => 'UserController@postLogin']);
