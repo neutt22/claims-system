@@ -178,14 +178,14 @@ form#stage-1 select {
 	margin-bottom: 10px;
 }
 
-form#stage-1 > textarea {
+form#stage-1 > textarea, #stage-3 textarea {
 	display: block;
 	margin-bottom: 10px;
 	height: 100px;
 	width: 300px;
 }
 
-form#stage-1 span, #stage-2 span {
+form#stage-1 span, #stage-2 span, #stage-3 span {
 	display: inline-block;
 	margin-bottom: 10px;
 	font-size: 15px;
