@@ -81,7 +81,10 @@ class HomeController extends Controller
         $info->claimant = $this->request->input('claimant');
         $info->coc = $this->request->input('coc');
         $info->inception = \Carbon\Carbon::parse($this->request->input('inception'));
+        $info->dm = $this->request->input('dm');
+        $info->policy = $this->request->input('policy');
         $info->documents = $this->request->input('docs');
+        $info->documents_comments = $this->request->input('docs_comments');
         $info->encoded = \Carbon\Carbon::now();
         $info->amount = $this->request->input('amount');
         $info->stage = 1;
