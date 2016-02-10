@@ -1,6 +1,11 @@
 @extends('app')
 
 @section('content')
+    @if( $errors->has() )
+        @foreach( $errors as $error)
+            has?
+        @endforeach
+    @endif
     <div class="login-container">
         <img src="{{ asset('img/logo.png') }}">
         <h4>Claims Login</h4>
