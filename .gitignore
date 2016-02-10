@@ -2,5 +2,5 @@
 /node_modules
 Homestead.yaml
 Homestead.json
-/.sass-cache/*
+**/.sass-cache/*
 .env
