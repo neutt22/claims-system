@@ -30,6 +30,7 @@
 			<span><small>*please double check fields before submitting</small></span><br/>
 			<input type="hidden" name="id" value="{{ $info->id }}">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
+			<input type="hidden" name="stage" value="1">
 			<input type="submit" value="Update" class="button" />
 			<a href="/">cancel</a>
 		</form>
