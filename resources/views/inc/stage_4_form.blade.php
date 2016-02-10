@@ -2,6 +2,13 @@
 			<h3><strong>Stage 4</strong></h3>
 		</div>
 
+		<p class="info tips">
+			<img src="{{ asset('img/Elegant-bank-cheque/13252-NP012T.jpg') }}">
+			<strong>Seriously? You got down here?!</strong>
+			Ayee, congrats! Now all you have to do is send the precios check to the claimant!
+			Note that the timer is still ticking so we gotta see some hastle out of ya.
+		</p>
+
 		<form id="stage-3" action="/edit" method="post">
 			<label style="cursor: pointer;"><input type="checkbox" name="released" value="yes">Check Released</label><br>
 			<span><small>*please double check fields before submitting</small></span><br/>

@@ -2,6 +2,10 @@
 			<h3><strong>Stage 2</strong></h3>
 		</div>
 
+		<p class="info tips">
+			Stage 2 is where you have to scan all the necessary documents. Eventually, will be sent to Malayan for further processing.
+		</p>
+
 		<form id="stage-2" action="/edit" method="post">
 			<label style="cursor: pointer;"><input type="checkbox" name="scanned" value="yes">Documents are scanned</label><br>
 			<label style="cursor: pointer;"><input type="checkbox" name="trans_mico" value="yes">Transmitted to MICO</label><br/>

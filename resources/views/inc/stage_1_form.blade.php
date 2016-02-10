@@ -1,6 +1,11 @@
 		<div class="stage-head">
 			<h3><strong>Stage 1</strong></h3>
 		</div>
+
+		<p class="info tips">
+			Entry point for the claimant's documents journey! Make sure to fillin the details that are mandatory.
+		</p>
+
 		
 		<form id="stage-1" action="/edit" method="post">
 			<input type="text" name="name" placeholder="enter principal name..." value="{{ $info->name }}" />
