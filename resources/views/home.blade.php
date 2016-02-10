@@ -40,6 +40,9 @@
       <input type="text" name="q" placeholder="claimant...">
       <img src="{{ asset('img/search.png') }}">
     </div>
+    <div>
+      <a href="#">advanced</a>
+    </div>
   </div>
 
   <?php if( isset($message) ): ?>

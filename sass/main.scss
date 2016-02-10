@@ -3,6 +3,7 @@
 
 $theme_color: #0066cc;
 $wrapper_color: #e5f7ff;
+$font_color: #404040;
 
 * {
 	box-sizing: border-box;
@@ -254,8 +255,22 @@ form#stage-1 > a {
 }
 
 /* SEARCH BOX ===================================*/
+
+.search-wrapper {
+	div:nth-child(3) {
+		margin-top: 2px;
+		text-align: right;
+		width: 260px;
+		font-size: 11px;
+		a {
+			color: $font_color;	
+		}
+	}
+}
+
 .search-box {
 	display: inline-block;
+	width: 200px;
 	overflow: hidden;
 	border: 1px solid $theme_color;
 	padding: 3px;
@@ -266,7 +281,9 @@ form#stage-1 > a {
 		border: 0px;
 	}
 	img {
+		position: absolute;
 		width: 20px;
-		float: right;
+		right: 2px;
+		top: 2px;
 	}
 }
