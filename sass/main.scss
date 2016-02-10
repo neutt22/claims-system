@@ -191,7 +191,8 @@ form#stage-1 span, #stage-2 span, #stage-3 span, #stage-4 span {
 	font-size: 15px;
 }
 
-form#stage-1 input[type='submit'] {
+form#stage-1 input[type='submit'], #stage-2 input[type='submit'],
+form#stage-3 input[type='submit'], #stage-4 input[type='submit'] {
 	display: inline-block;
 	margin-right: 30px;
 }
