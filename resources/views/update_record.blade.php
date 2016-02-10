@@ -29,6 +29,10 @@
 		@include('inc.stage_1_form')
 
 		<hr>
+
+		@include('inc.stage_2_form')
+
+		<hr>
 	@else
 		<p class="error">
 			If you got here accidentally, please go back <a href="/">home</a>.
