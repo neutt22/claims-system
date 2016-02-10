@@ -165,34 +165,48 @@ a#new-record {
   font-size: 14px;
 }
 
+/* STAGE HEAD ===================================*/
+/* line 159, ../sass/main.scss */
+.stage-head {
+  border-left: 3px solid #0066cc;
+  padding-left: 5px;
+  background-image: url("/img/arrow.png");
+  background-repeat: no-repeat;
+  background-size: 35px;
+  background-position: right top;
+  width: 102px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
 /* STAGE 1 FORM ===================================*/
-/* line 160, ../sass/main.scss */
+/* line 174, ../sass/main.scss */
 .req {
   border: 1px solid #ffb3b3;
 }
 
-/* line 164, ../sass/main.scss */
+/* line 178, ../sass/main.scss */
 form#stage-1 input {
   margin-bottom: 10px;
   display: block;
 }
-/* line 167, ../sass/main.scss */
+/* line 181, ../sass/main.scss */
 form#stage-1 input label {
   font-size: 15px;
   cursor: pointer;
 }
 
-/* line 173, ../sass/main.scss */
+/* line 187, ../sass/main.scss */
 form#stage-1 input[type='checkbox'] {
   display: inline-block;
 }
 
-/* line 177, ../sass/main.scss */
+/* line 191, ../sass/main.scss */
 form#stage-1 select {
   margin-bottom: 10px;
 }
 
-/* line 181, ../sass/main.scss */
+/* line 195, ../sass/main.scss */
 form#stage-1 > textarea, #stage-3 textarea {
   display: block;
   margin-bottom: 10px;
@@ -200,28 +214,28 @@ form#stage-1 > textarea, #stage-3 textarea {
   width: 300px;
 }
 
-/* line 188, ../sass/main.scss */
+/* line 202, ../sass/main.scss */
 form#stage-1 span, #stage-2 span, #stage-3 span, #stage-4 span {
   display: inline-block;
   margin-bottom: 10px;
   font-size: 15px;
 }
 
-/* line 194, ../sass/main.scss */
+/* line 208, ../sass/main.scss */
 form#stage-1 input[type='submit'], #stage-2 input[type='submit'],
 form#stage-3 input[type='submit'], #stage-4 input[type='submit'] {
   display: inline-block;
   margin-right: 30px;
 }
 
-/* line 200, ../sass/main.scss */
+/* line 214, ../sass/main.scss */
 form#stage-1 > a {
   /*text-decoration: none;*/
   font-size: 15px;
 }
 
 /* MESSAGES ===================================*/
-/* line 207, ../sass/main.scss */
+/* line 221, ../sass/main.scss */
 .error {
   background: #ffebcc;
   border: 2px solid #ffd633;
@@ -234,7 +248,7 @@ form#stage-1 > a {
   width: 30%;
 }
 
-/* line 217, ../sass/main.scss */
+/* line 231, ../sass/main.scss */
 .success {
   background: #99ff99;
   border: 2px solid #00e600;
@@ -248,7 +262,7 @@ form#stage-1 > a {
 }
 
 /* LOGIN FORM ===================================*/
-/* line 228, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 .login-container {
   position: absolute;
   top: 0;
@@ -263,25 +277,25 @@ form#stage-1 > a {
   padding: 10px;
   padding-top: 40px;
 }
-/* line 241, ../sass/main.scss */
+/* line 255, ../sass/main.scss */
 .login-container img {
   width: 30%;
   position: absolute;
 }
-/* line 245, ../sass/main.scss */
+/* line 259, ../sass/main.scss */
 .login-container h4 {
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
-/* line 250, ../sass/main.scss */
+/* line 264, ../sass/main.scss */
 .login-container form {
   display: block;
   width: 80%;
   margin: 0 auto;
   margin-top: 40px;
 }
-/* line 256, ../sass/main.scss */
+/* line 270, ../sass/main.scss */
 .login-container input {
   outline: none;
   display: block;
@@ -291,26 +305,26 @@ form#stage-1 > a {
 }
 
 /* SEARCH BOX ===================================*/
-/* line 267, ../sass/main.scss */
+/* line 281, ../sass/main.scss */
 .search-wrapper {
   width: 260px;
 }
-/* line 268, ../sass/main.scss */
+/* line 282, ../sass/main.scss */
 .search-wrapper label {
   display: inline-block;
   width: 20%;
 }
-/* line 273, ../sass/main.scss */
+/* line 287, ../sass/main.scss */
 .search-wrapper div:nth-child(3) {
   margin-top: 4px;
   text-align: right;
   font-size: 11px;
 }
-/* line 277, ../sass/main.scss */
+/* line 291, ../sass/main.scss */
 .search-wrapper div:nth-child(3) a {
   color: #404040;
 }
-/* line 281, ../sass/main.scss */
+/* line 295, ../sass/main.scss */
 .search-wrapper .search-box {
   display: inline-block;
   width: 75%;
@@ -321,12 +335,12 @@ form#stage-1 > a {
   top: 8px;
   right: -9px;
 }
-/* line 290, ../sass/main.scss */
+/* line 304, ../sass/main.scss */
 .search-wrapper .search-box input {
   outline: none;
   border: 0px;
 }
-/* line 294, ../sass/main.scss */
+/* line 308, ../sass/main.scss */
 .search-wrapper .search-box img {
   position: absolute;
   width: 20px;

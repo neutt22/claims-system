@@ -1,4 +1,6 @@
-		<h3 style="text-decoration: underline;"><strong>Stage 4</strong></h3>
+		<div class="stage-head">
+			<h3><strong>Stage 4</strong></h3>
+		</div>
 
 		<form id="stage-3" action="/edit" method="post">
 			<label style="cursor: pointer;"><input type="checkbox" name="released" value="yes">Check Released</label><br>

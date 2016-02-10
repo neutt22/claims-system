@@ -1,4 +1,6 @@
-		<h3 style="text-decoration: underline;"><strong>Stage 2</strong></h3>
+		<div class="stage-head">
+			<h3><strong>Stage 2</strong></h3>
+		</div>
 
 		<form id="stage-2" action="/edit" method="post">
 			<label style="cursor: pointer;"><input type="checkbox" name="scanned" value="yes">Documents are scanned</label><br>

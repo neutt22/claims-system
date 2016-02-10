@@ -1,5 +1,7 @@
-		<h3 style="text-decoration: underline;"><strong>Stage 1</strong></h3>
-
+		<div class="stage-head">
+			<h3><strong>Stage 1</strong></h3>
+		</div>
+		
 		<form id="stage-1" action="/edit" method="post">
 			<input type="text" name="name" placeholder="enter principal name..." value="{{ $info->name }}" />
 			<input type="text" name="claimant" placeholder="enter claimant name..." value="{{ $info->claimant }}" />

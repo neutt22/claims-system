@@ -1,4 +1,6 @@
-		<h3 style="text-decoration: underline;"><strong>Stage 3</strong></h3>
+		<div class="stage-head">
+			<h3><strong>Stage 3</strong></h3>
+		</div>
 
 		<form id="stage-3" action="/edit" method="post">
 			<textarea name="followup_comments" placeholder="follow up status here..."></textarea>
