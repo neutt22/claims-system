@@ -13,7 +13,7 @@
 
 Route::group(['middleware' => ['web']], function () {
 
-	Route::get('/', 'HomeController@index');
+	Route::get('/', ['as' => 'home', 'uses' => 'HomeController@index']);
 
 	Route::post('/new', 'HomeController@post_new_record');
 	Route::post('/edit', 'HomeController@post_update_record');
