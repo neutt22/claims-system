@@ -34,7 +34,7 @@
     <div id="chart_encoded" style="display: inline-block;"></div>
   </div>
 
-  <div class="search-wrapper">
+  <div class="search-wrapper hint--top-right" data-hint="Search here. Click the advanced settings for more search options.">
     <label>Search: </label>
     <div class="search-box">
       <input type="text" name="q" placeholder="claimant...">
