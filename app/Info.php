@@ -31,15 +31,15 @@ class Info extends Model
         }
     }
 
-    public function processStage2() {
+    public function processStage2(Request $request) {
 
     }
 
-    public function processStage3() {
+    public function processStage3(Request $request) {
 
     }
 
-    public function processStage4() {
+    public function processStage4(Request $request) {
 
     }
 }

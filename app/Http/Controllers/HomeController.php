@@ -125,11 +125,11 @@ class HomeController extends Controller
 
             return $i->processStage1($this->request);
         }else if($stage == 2) {
-            dd($this->request->all());
+            return $i->processStage2($this->request);
         }else if($stage == 3) {
-            
+            return $i->processStage3($this->request);
         }else if($stage == 4) {
-
+            return $i->processStage4($this->request);
         }else {
             return redirect()->route('home');
         }
