@@ -218,24 +218,32 @@ form#stage-1 > a {
 
 /* MESSAGES ===================================*/
 
-.error {
-	background: #ffebcc;
-	border: 2px solid #ffd633;
-	@include border-radius(4px);
-	padding: 10px;
-	padding-left: 30px;
-	font-size: 15px;
-	width: 30%;
-}
-
-.success {
-	background: #99ff99;
-	border: 2px solid #00e600;
+@mixin popup($background_color, $border_color) {
+	background: $background_color;
+	border: 2px solid $border_color;
 	@include border-radius(4px);
 	padding: 10px;
 	padding-left: 20px;
 	font-size: 15px;
 	width: 30%;
+}
+
+.error {
+	@include popup(#ffebcc, #ffd633);
+}
+
+.success {
+	@include popup(#99ff99, #00e600);
+}
+
+.tips {
+	@include popup(lighten($theme_color, 55%), lighten($theme_color, 35%));
+	color: lighten($theme_color, 30%);
+	img {
+		width: 40%;
+		@include border-radius(50%);
+		float: right;
+	}
 }
 
 /* LOGIN FORM ===================================*/

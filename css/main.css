@@ -262,9 +262,9 @@ form#stage-1 > a {
 }
 
 /* line 239, ../sass/main.scss */
-.info {
+.tips {
   background: #e6f2ff;
-  border: 2px solid #b3d9ff;
+  border: 2px solid #80bfff;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
   border-radius: 4px;
@@ -272,26 +272,19 @@ form#stage-1 > a {
   padding-left: 20px;
   font-size: 15px;
   width: 30%;
-  color: #70b8ff;
+  color: #66b3ff;
 }
-
-/* line 244, ../sass/main.scss */
-.tips {
-  right: 400px;
-  width: 400px;
-  overflow: hidden;
-}
-/* line 248, ../sass/main.scss */
+/* line 242, ../sass/main.scss */
 .tips img {
-  width: 25%;
-  float: right;
+  width: 40%;
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  float: right;
 }
 
 /* LOGIN FORM ===================================*/
-/* line 256, ../sass/main.scss */
+/* line 250, ../sass/main.scss */
 .login-container {
   position: absolute;
   top: 0;
@@ -306,25 +299,25 @@ form#stage-1 > a {
   padding: 10px;
   padding-top: 40px;
 }
-/* line 269, ../sass/main.scss */
+/* line 263, ../sass/main.scss */
 .login-container img {
   width: 30%;
   position: absolute;
 }
-/* line 273, ../sass/main.scss */
+/* line 267, ../sass/main.scss */
 .login-container h4 {
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
-/* line 278, ../sass/main.scss */
+/* line 272, ../sass/main.scss */
 .login-container form {
   display: block;
   width: 80%;
   margin: 0 auto;
   margin-top: 40px;
 }
-/* line 284, ../sass/main.scss */
+/* line 278, ../sass/main.scss */
 .login-container input {
   outline: none;
   display: block;
@@ -334,26 +327,26 @@ form#stage-1 > a {
 }
 
 /* SEARCH BOX ===================================*/
-/* line 295, ../sass/main.scss */
+/* line 289, ../sass/main.scss */
 .search-wrapper {
   width: 260px;
 }
-/* line 296, ../sass/main.scss */
+/* line 290, ../sass/main.scss */
 .search-wrapper label {
   display: inline-block;
   width: 20%;
 }
-/* line 301, ../sass/main.scss */
+/* line 295, ../sass/main.scss */
 .search-wrapper div:nth-child(3) {
   margin-top: 4px;
   text-align: right;
   font-size: 11px;
 }
-/* line 305, ../sass/main.scss */
+/* line 299, ../sass/main.scss */
 .search-wrapper div:nth-child(3) a {
   color: #404040;
 }
-/* line 309, ../sass/main.scss */
+/* line 303, ../sass/main.scss */
 .search-wrapper .search-box {
   display: inline-block;
   width: 75%;
@@ -364,12 +357,12 @@ form#stage-1 > a {
   top: 8px;
   right: -9px;
 }
-/* line 318, ../sass/main.scss */
+/* line 312, ../sass/main.scss */
 .search-wrapper .search-box input {
   outline: none;
   border: 0px;
 }
-/* line 322, ../sass/main.scss */
+/* line 316, ../sass/main.scss */
 .search-wrapper .search-box img {
   position: absolute;
   width: 20px;
