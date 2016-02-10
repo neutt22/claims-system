@@ -10,6 +10,12 @@ $font_color: #404040;
 	outline: none;
 }
 
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
 .wrapper {
 	background: $wrapper_color;
 	width: 1100px;

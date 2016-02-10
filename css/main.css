@@ -5,6 +5,13 @@
 }
 
 /* line 13, ../sass/main.scss */
+hr {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+/* line 19, ../sass/main.scss */
 .wrapper {
   background: #e5f7ff;
   width: 1100px;
@@ -13,14 +20,14 @@
 }
 
 /* PROFILE PICTURE/SETTINGS ==============================*/
-/* line 22, ../sass/main.scss */
+/* line 28, ../sass/main.scss */
 #profile {
   position: absolute;
   right: 0;
   top: -30px;
 }
 
-/* line 28, ../sass/main.scss */
+/* line 34, ../sass/main.scss */
 img#profile-pic {
   display: block;
   margin: 0 auto;
@@ -30,12 +37,12 @@ img#profile-pic {
   border: 2px solid #0066cc;
   width: 40%;
 }
-/* line 34, ../sass/main.scss */
+/* line 40, ../sass/main.scss */
 img#profile-pic a:active {
   display: none;
 }
 
-/* line 39, ../sass/main.scss */
+/* line 45, ../sass/main.scss */
 ul#dropdown {
   display: none;
   background: #f2f2f2;
@@ -46,11 +53,11 @@ ul#dropdown {
   margin-top: 10px;
   border: 1px solid #d9d9d9;
 }
-/* line 48, ../sass/main.scss */
+/* line 54, ../sass/main.scss */
 ul#dropdown li {
   list-style: none;
 }
-/* line 50, ../sass/main.scss */
+/* line 56, ../sass/main.scss */
 ul#dropdown li a {
   color: #404040;
   font-family: 'Lato', sans-serif;
@@ -60,14 +67,14 @@ ul#dropdown li a {
   font-size: 13px;
   padding: 5px 0px;
 }
-/* line 58, ../sass/main.scss */
+/* line 64, ../sass/main.scss */
 ul#dropdown li a:hover {
   color: #d9d9d9;
   background: #404040;
 }
 
 /* HOME PAGE DASHBOARD ===================================*/
-/* line 67, ../sass/main.scss */
+/* line 73, ../sass/main.scss */
 div.dashboard {
   position: relative;
   display: block;
@@ -80,19 +87,19 @@ div.dashboard {
 }
 
 /* LOGO ===================================*/
-/* line 80, ../sass/main.scss */
+/* line 86, ../sass/main.scss */
 .logo {
   width: 15%;
 }
 
-/* line 85, ../sass/main.scss */
+/* line 91, ../sass/main.scss */
 h3 {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
 
 /* TABLE ===================================*/
-/* line 91, ../sass/main.scss */
+/* line 97, ../sass/main.scss */
 th {
   text-align: left;
   padding: 5px;
@@ -101,7 +108,7 @@ th {
   color: #404040;
 }
 
-/* line 99, ../sass/main.scss */
+/* line 105, ../sass/main.scss */
 td {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -110,29 +117,29 @@ td {
   cursor: pointer;
 }
 
-/* line 108, ../sass/main.scss */
+/* line 114, ../sass/main.scss */
 .td-action {
   text-align: center;
 }
 
-/* line 112, ../sass/main.scss */
+/* line 118, ../sass/main.scss */
 tr:nth-child(odd) {
   background: #f5faff;
 }
 
-/* line 117, ../sass/main.scss */
+/* line 123, ../sass/main.scss */
 tr:hover {
   background: #e6f2ff;
 }
 
-/* line 122, ../sass/main.scss */
+/* line 128, ../sass/main.scss */
 table {
   margin-top: 40px;
   border-collapse: collapse;
 }
 
 /* BUTTON ===================================*/
-/* line 129, ../sass/main.scss */
+/* line 135, ../sass/main.scss */
 .button {
   outline: none;
   color: white;
@@ -142,50 +149,50 @@ table {
   text-decoration: none;
 }
 
-/* line 138, ../sass/main.scss */
+/* line 144, ../sass/main.scss */
 .button:hover {
   background: #004c99;
 }
 
-/* line 142, ../sass/main.scss */
+/* line 148, ../sass/main.scss */
 small {
   color: #666666;
 }
 
-/* line 146, ../sass/main.scss */
+/* line 152, ../sass/main.scss */
 a#new-record {
   float: right;
   font-size: 14px;
 }
 
 /* STAGE 1 FORM ===================================*/
-/* line 153, ../sass/main.scss */
+/* line 159, ../sass/main.scss */
 .req {
   border: 1px solid #ffb3b3;
 }
 
-/* line 157, ../sass/main.scss */
+/* line 163, ../sass/main.scss */
 form#stage-1 input {
   margin-bottom: 10px;
   display: block;
 }
-/* line 160, ../sass/main.scss */
+/* line 166, ../sass/main.scss */
 form#stage-1 input label {
   font-size: 15px;
   cursor: pointer;
 }
 
-/* line 166, ../sass/main.scss */
+/* line 172, ../sass/main.scss */
 form#stage-1 input[type='checkbox'] {
   display: inline-block;
 }
 
-/* line 170, ../sass/main.scss */
+/* line 176, ../sass/main.scss */
 form#stage-1 select {
   margin-bottom: 10px;
 }
 
-/* line 174, ../sass/main.scss */
+/* line 180, ../sass/main.scss */
 form#stage-1 > textarea {
   display: block;
   margin-bottom: 10px;
@@ -193,27 +200,27 @@ form#stage-1 > textarea {
   width: 300px;
 }
 
-/* line 181, ../sass/main.scss */
+/* line 187, ../sass/main.scss */
 form#stage-1 span {
   display: inline-block;
   margin-bottom: 10px;
   font-size: 15px;
 }
 
-/* line 187, ../sass/main.scss */
+/* line 193, ../sass/main.scss */
 form#stage-1 input[type='submit'] {
   display: inline-block;
   margin-right: 30px;
 }
 
-/* line 192, ../sass/main.scss */
+/* line 198, ../sass/main.scss */
 form#stage-1 > a {
   /*text-decoration: none;*/
   font-size: 15px;
 }
 
 /* MESSAGES ===================================*/
-/* line 199, ../sass/main.scss */
+/* line 205, ../sass/main.scss */
 .error {
   background: #ffebcc;
   border: 2px solid #ffd633;
@@ -226,7 +233,7 @@ form#stage-1 > a {
   width: 30%;
 }
 
-/* line 209, ../sass/main.scss */
+/* line 215, ../sass/main.scss */
 .success {
   background: #99ff99;
   border: 2px solid #00e600;
@@ -240,7 +247,7 @@ form#stage-1 > a {
 }
 
 /* LOGIN FORM ===================================*/
-/* line 220, ../sass/main.scss */
+/* line 226, ../sass/main.scss */
 .login-container {
   position: absolute;
   top: 0;
@@ -255,25 +262,25 @@ form#stage-1 > a {
   padding: 10px;
   padding-top: 40px;
 }
-/* line 233, ../sass/main.scss */
+/* line 239, ../sass/main.scss */
 .login-container img {
   width: 30%;
   position: absolute;
 }
-/* line 237, ../sass/main.scss */
+/* line 243, ../sass/main.scss */
 .login-container h4 {
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
-/* line 242, ../sass/main.scss */
+/* line 248, ../sass/main.scss */
 .login-container form {
   display: block;
   width: 80%;
   margin: 0 auto;
   margin-top: 40px;
 }
-/* line 248, ../sass/main.scss */
+/* line 254, ../sass/main.scss */
 .login-container input {
   outline: none;
   display: block;
@@ -283,26 +290,26 @@ form#stage-1 > a {
 }
 
 /* SEARCH BOX ===================================*/
-/* line 259, ../sass/main.scss */
+/* line 265, ../sass/main.scss */
 .search-wrapper {
   width: 260px;
 }
-/* line 260, ../sass/main.scss */
+/* line 266, ../sass/main.scss */
 .search-wrapper label {
   display: inline-block;
   width: 20%;
 }
-/* line 265, ../sass/main.scss */
+/* line 271, ../sass/main.scss */
 .search-wrapper div:nth-child(3) {
   margin-top: 4px;
   text-align: right;
   font-size: 11px;
 }
-/* line 269, ../sass/main.scss */
+/* line 275, ../sass/main.scss */
 .search-wrapper div:nth-child(3) a {
   color: #404040;
 }
-/* line 273, ../sass/main.scss */
+/* line 279, ../sass/main.scss */
 .search-wrapper .search-box {
   display: inline-block;
   width: 75%;
@@ -313,12 +320,12 @@ form#stage-1 > a {
   top: 8px;
   right: -9px;
 }
-/* line 282, ../sass/main.scss */
+/* line 288, ../sass/main.scss */
 .search-wrapper .search-box input {
   outline: none;
   border: 0px;
 }
-/* line 286, ../sass/main.scss */
+/* line 292, ../sass/main.scss */
 .search-wrapper .search-box img {
   position: absolute;
   width: 20px;
