@@ -110,30 +110,28 @@ class HomeController extends Controller
         return view('update_record')->withInfo($info);
     }
 
-    public function post_update_record() {
+    public function post_update_record(Info $i) {
 
-        $this->validate($this->request,[
-            'name' => 'required',
-            'claimant' => 'required',
-            'coc' => 'required',
-            'inception' => 'required',
-        ]);
+        $stage = $this->request->input('stage');
 
-        $info = Info::find($this->request->input('id'));
-        $info->name = $this->request->input('name');
-        $info->claimant = $this->request->input('claimant');
-        $info->coc = $this->request->input('coc');
-        $info->inception = \Carbon\Carbon::parse($this->request->input('inception'));
-        $info->dm = $this->request->input('dm');
-        $info->policy = $this->request->input('policy');
-        $info->documents = $this->request->input('docs');
-        $info->documents_comments = $this->request->input('docs_comments');
-        $info->amount = $this->request->input('amount');
+        if($stage == 1) {
 
-        if( $info->save() ) {
-            return redirect()->route('home')->with('message', 'Record has been updated.');
+            $this->validate($this->request,[
+                'name' => 'required',
+                'claimant' => 'required',
+                'coc' => 'required',
+                'inception' => 'required',
+            ]);
+
+            return $i->processStage1($this->request);
+        }else if($stage == 2) {
+            dd($this->request->all());
+        }else if($stage == 3) {
+            
+        }else if($stage == 4) {
+
         }else {
-            return 'Something went wrong recording, please contact master Jim from GIBX';
+            return redirect()->route('home');
         }
     }
 
