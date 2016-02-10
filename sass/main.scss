@@ -2,6 +2,7 @@
 @import "compass";
 
 $theme_color: #0066cc;
+$wrapper_color: #e5f7ff;
 
 * {
 	box-sizing: border-box;
@@ -9,7 +10,7 @@ $theme_color: #0066cc;
 }
 
 .wrapper {
-	background: #e5f7ff;
+	background: $wrapper_color;
 	width: 1100px;
 	margin: 0 auto;
 	padding: 3em;
@@ -213,4 +214,40 @@ form#stage-1 > a {
 	width: 30%;
 }
 
-
+/* LOGIN FORM ===================================*/
+.login-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: $wrapper_color;
+	width: 500px;
+	height: 250px;
+	margin: auto;
+	overflow: auto;
+	padding: 10px;
+	padding-top: 40px;
+	img {
+		width: 30%;
+		position: absolute;
+	}
+	h4 {
+		text-align: center;
+		font-family: 'Lato', sans-serif;
+		font-weight: 300;
+	}
+	form {
+		display: block;
+		width: 80%;
+		margin: 0 auto;
+		margin-top: 40px;
+	}
+	input {
+		outline: none;
+		display: block;
+		margin: 0 auto;
+		margin-bottom: 5px;
+		border: 1px solid lighten($theme_color, 30%);
+	}
+}

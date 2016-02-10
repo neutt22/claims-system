@@ -1,10 +1,10 @@
-/* line 6, ../sass/main.scss */
+/* line 7, ../sass/main.scss */
 * {
   box-sizing: border-box;
   outline: none;
 }
 
-/* line 11, ../sass/main.scss */
+/* line 12, ../sass/main.scss */
 .wrapper {
   background: #e5f7ff;
   width: 1100px;
@@ -13,13 +13,13 @@
 }
 
 /* PROFILE PICTURE/SETTINGS ==============================*/
-/* line 20, ../sass/main.scss */
+/* line 21, ../sass/main.scss */
 #profile {
   position: absolute;
   right: 0;
 }
 
-/* line 25, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 img#profile-pic {
   display: block;
   margin: 0 auto;
@@ -29,12 +29,12 @@ img#profile-pic {
   border: 2px solid #0066cc;
   width: 40%;
 }
-/* line 31, ../sass/main.scss */
+/* line 32, ../sass/main.scss */
 img#profile-pic a:active {
   display: none;
 }
 
-/* line 36, ../sass/main.scss */
+/* line 37, ../sass/main.scss */
 ul#dropdown {
   display: none;
   background: #f2f2f2;
@@ -45,11 +45,11 @@ ul#dropdown {
   margin-top: 10px;
   border: 1px solid #d9d9d9;
 }
-/* line 45, ../sass/main.scss */
+/* line 46, ../sass/main.scss */
 ul#dropdown li {
   list-style: none;
 }
-/* line 47, ../sass/main.scss */
+/* line 48, ../sass/main.scss */
 ul#dropdown li a {
   color: #404040;
   font-family: 'Lato', sans-serif;
@@ -59,14 +59,14 @@ ul#dropdown li a {
   font-size: 13px;
   padding: 5px 0px;
 }
-/* line 55, ../sass/main.scss */
+/* line 56, ../sass/main.scss */
 ul#dropdown li a:hover {
   color: #d9d9d9;
   background: #404040;
 }
 
 /* HOME PAGE DASHBOARD ===================================*/
-/* line 64, ../sass/main.scss */
+/* line 65, ../sass/main.scss */
 div.dashboard {
   position: relative;
   display: block;
@@ -79,19 +79,19 @@ div.dashboard {
 }
 
 /* LOGO ===================================*/
-/* line 77, ../sass/main.scss */
+/* line 78, ../sass/main.scss */
 .logo {
   width: 15%;
 }
 
-/* line 82, ../sass/main.scss */
+/* line 83, ../sass/main.scss */
 h3 {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
 
 /* TABLE ===================================*/
-/* line 88, ../sass/main.scss */
+/* line 89, ../sass/main.scss */
 th {
   text-align: left;
   padding: 5px;
@@ -100,7 +100,7 @@ th {
   color: #404040;
 }
 
-/* line 96, ../sass/main.scss */
+/* line 97, ../sass/main.scss */
 td {
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -109,29 +109,29 @@ td {
   cursor: pointer;
 }
 
-/* line 105, ../sass/main.scss */
+/* line 106, ../sass/main.scss */
 .td-action {
   text-align: center;
 }
 
-/* line 109, ../sass/main.scss */
+/* line 110, ../sass/main.scss */
 tr:nth-child(odd) {
   background: #f5faff;
 }
 
-/* line 114, ../sass/main.scss */
+/* line 115, ../sass/main.scss */
 tr:hover {
   background: #e6f2ff;
 }
 
-/* line 119, ../sass/main.scss */
+/* line 120, ../sass/main.scss */
 table {
   margin-top: 40px;
   border-collapse: collapse;
 }
 
 /* BUTTON ===================================*/
-/* line 126, ../sass/main.scss */
+/* line 127, ../sass/main.scss */
 .button {
   outline: none;
   color: white;
@@ -141,50 +141,50 @@ table {
   text-decoration: none;
 }
 
-/* line 135, ../sass/main.scss */
+/* line 136, ../sass/main.scss */
 .button:hover {
   background: #004c99;
 }
 
-/* line 139, ../sass/main.scss */
+/* line 140, ../sass/main.scss */
 small {
   color: #666666;
 }
 
-/* line 143, ../sass/main.scss */
+/* line 144, ../sass/main.scss */
 a#new-record {
   float: right;
   font-size: 14px;
 }
 
 /* STAGE 1 FORM ===================================*/
-/* line 150, ../sass/main.scss */
+/* line 151, ../sass/main.scss */
 .req {
   border: 1px solid #ffb3b3;
 }
 
-/* line 154, ../sass/main.scss */
+/* line 155, ../sass/main.scss */
 form#stage-1 input {
   margin-bottom: 10px;
   display: block;
 }
-/* line 157, ../sass/main.scss */
+/* line 158, ../sass/main.scss */
 form#stage-1 input label {
   font-size: 15px;
   cursor: pointer;
 }
 
-/* line 163, ../sass/main.scss */
+/* line 164, ../sass/main.scss */
 form#stage-1 input[type='checkbox'] {
   display: inline-block;
 }
 
-/* line 167, ../sass/main.scss */
+/* line 168, ../sass/main.scss */
 form#stage-1 select {
   margin-bottom: 10px;
 }
 
-/* line 171, ../sass/main.scss */
+/* line 172, ../sass/main.scss */
 form#stage-1 > textarea {
   display: block;
   margin-bottom: 10px;
@@ -192,27 +192,27 @@ form#stage-1 > textarea {
   width: 300px;
 }
 
-/* line 178, ../sass/main.scss */
+/* line 179, ../sass/main.scss */
 form#stage-1 span {
   display: inline-block;
   margin-bottom: 10px;
   font-size: 15px;
 }
 
-/* line 184, ../sass/main.scss */
+/* line 185, ../sass/main.scss */
 form#stage-1 input[type='submit'] {
   display: inline-block;
   margin-right: 30px;
 }
 
-/* line 189, ../sass/main.scss */
+/* line 190, ../sass/main.scss */
 form#stage-1 > a {
   /*text-decoration: none;*/
   font-size: 15px;
 }
 
 /* MESSAGES ===================================*/
-/* line 196, ../sass/main.scss */
+/* line 197, ../sass/main.scss */
 .error {
   background: #ffebcc;
   border: 2px solid #ffd633;
@@ -225,7 +225,7 @@ form#stage-1 > a {
   width: 30%;
 }
 
-/* line 206, ../sass/main.scss */
+/* line 207, ../sass/main.scss */
 .success {
   background: #99ff99;
   border: 2px solid #00e600;
@@ -236,4 +236,47 @@ form#stage-1 > a {
   padding-left: 20px;
   font-size: 15px;
   width: 30%;
+}
+
+/* LOGIN FORM ===================================*/
+/* line 218, ../sass/main.scss */
+.login-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #e5f7ff;
+  width: 500px;
+  height: 250px;
+  margin: auto;
+  overflow: auto;
+  padding: 10px;
+  padding-top: 40px;
+}
+/* line 231, ../sass/main.scss */
+.login-container img {
+  width: 30%;
+  position: absolute;
+}
+/* line 235, ../sass/main.scss */
+.login-container h4 {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+}
+/* line 240, ../sass/main.scss */
+.login-container form {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+/* line 246, ../sass/main.scss */
+.login-container input {
+  outline: none;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 5px;
+  border: 1px solid #66b3ff;
 }

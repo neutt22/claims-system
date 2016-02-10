@@ -20,5 +20,7 @@ Route::group(['middleware' => ['web']], function () {
 
 	Route::get('/new', 'HomeController@new_record');
 	Route::get('/edit', 'HomeController@update_record');
-
 });
+
+Route::get('/login', ['as' => 'getLogin', 'uses' => 'UserController@getLogin']);
+Route::post('/login', ['as' => 'postLogin', 'uses' => 'UserController@postLogin']);
