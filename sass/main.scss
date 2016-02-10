@@ -13,7 +13,8 @@ $font_color: #404040;
 hr {
     border: 0;
     height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+    border-top: 1px solid lighten($theme_color, 40%);
+    // background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 .wrapper {
@@ -184,7 +185,7 @@ form#stage-1 > textarea {
 	width: 300px;
 }
 
-form#stage-1 span {
+form#stage-1 span, #stage-2 span {
 	display: inline-block;
 	margin-bottom: 10px;
 	font-size: 15px;
