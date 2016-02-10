@@ -96,4 +96,15 @@ class HomeController extends Controller
             return 'Something went wrong recording, please contact master Jim from GIBX';
         }
     }
+
+    public function update_record() {
+
+        $info = Info::find($this->request->input('id'));
+
+        if( count($info) == 0 ) {
+            return view('update_record');
+        }
+
+        return view('update_record')->withInfo($info);
+    }
 }
