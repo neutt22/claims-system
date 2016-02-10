@@ -36,6 +36,10 @@
 
   <div class="search-wrapper">
     <label>Search: </label>
+    <div class="search-box">
+      <input type="text" name="q" placeholder="claimant...">
+      <img src="{{ asset('img/search.png') }}">
+    </div>
   </div>
 
   <?php if( isset($message) ): ?>

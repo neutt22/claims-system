@@ -252,3 +252,21 @@ form#stage-1 > a {
 		border: 1px solid lighten($theme_color, 30%);
 	}
 }
+
+/* SEARCH BOX ===================================*/
+.search-box {
+	display: inline-block;
+	overflow: hidden;
+	border: 1px solid $theme_color;
+	padding: 3px;
+	position: relative;
+	top: 8px;
+	input {
+		outline: none;
+		border: 0px;
+	}
+	img {
+		width: 20px;
+		float: right;
+	}
+}

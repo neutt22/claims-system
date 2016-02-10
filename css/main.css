@@ -281,3 +281,24 @@ form#stage-1 > a {
   margin-bottom: 5px;
   border: 1px solid #66b3ff;
 }
+
+/* SEARCH BOX ===================================*/
+/* line 257, ../sass/main.scss */
+.search-box {
+  display: inline-block;
+  overflow: hidden;
+  border: 1px solid #0066cc;
+  padding: 3px;
+  position: relative;
+  top: 8px;
+}
+/* line 264, ../sass/main.scss */
+.search-box input {
+  outline: none;
+  border: 0px;
+}
+/* line 268, ../sass/main.scss */
+.search-box img {
+  width: 20px;
+  float: right;
+}
