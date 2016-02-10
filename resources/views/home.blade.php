@@ -12,14 +12,14 @@
     <a href="/"><img class="logo" src="/img/logo.png" style="position: absolute; left: 5px; top: -15px;"></a>
     <div id="profile">
       <small style="font-size: 11px;">{{ \Auth::user()->level }}</small>
-      <a id="pa" href="#"><img id="profile-pic" src="<?php echo e(asset('img/profile_pic.jpg')); ?>"></a>
+      <a id="pa" href="#"><img id="profile-pic" src="{{ asset('img/profile_pic.jpg') }}"></a>
       <small style="font-size: 11px;">{{ \Auth::user()->email }}</small>
       <ul id="dropdown">
-        <li><a href="/new">New Record</a></li>
-        <li><a href="#">Reports</a></li>
-        <li><a href="#">Settings</a></li>
+        <li><a class="hint--left" data-hint="Another claimant?! No problem." href="/new">New Record</a></li>
+        <li><a class="hint--left" data-hint="So your boss are asking for reports?" href="#">Reports</a></li>
+        <li><a class="hint--left" data-hint="Settings for my lovely app!" href="#">Settings</a></li>
         <li><hr style="margin: 0; border-top: 1px solid #d9d9d9; margin: 0 5px;"></li>
-        <li><a href="/logout">Log Out</a></li>
+        <li><a class="hint--left" data-hint="I hate to see you go." href="/logout">Log Out</a></li>
       </ul>
     </div>
     <h3>Claims System v.0.1</h3>
