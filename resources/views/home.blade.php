@@ -45,12 +45,11 @@
     </div>
   </div>
 
-  <?php if( isset($message) ): ?>
+  @if( isset($message) )
     <p class="success">
-      <?php echo $message; ?>
-
+      {{ $message }}
     </p>
-  <?php endif; ?>
+  @endif
 
   <table style="width:100%">
     <tr>
@@ -64,42 +63,42 @@
       <th>Stage</th>
       <th>Status</th>
     </tr>
-    <?php if( count($info) > 0 ): ?>
-      <?php foreach( $info as $data ): ?>
+    @if( count($info) > 0 )
+      @foreach( $info as $data)
         <tr>
           <td>
-            <?php echo e($data->name); ?>
+            {{ $data->name }}
           </td>
           <td>
-            <?php echo e($data->claimant); ?>
+            {{ $data->claimant }}
           </td>
           <td>
-            <?php echo e($data->coc); ?>
+            {{ $data->coc }}
           </td>
           <td>
-            <?php echo e($data->documents); ?>
+            {{ $data->documents }}
           </td>
           <td>
-            <?php echo e(\Carbon\Carbon::parse($data->inception)->format('m/d/Y')); ?>
+            {{ \Carbon\Carbon::parse($data->inception)->format('m/d/Y') }}
           </td>
           <td>
-            <?php echo e(\Carbon\Carbon::parse($data->encoded)->format('m/d/Y')); ?>
+            {{ \Carbon\Carbon::parse($data->encoded)->format('m/d/Y') }}
           </td>
           <td>
-            <?php echo e($data->amount); ?>
+            {{ $data->amount }}
           </td>
           <td>
-            <?php echo e($data->stage); ?>
+            {{ $data->stage }}
           </td>
           <td>
             <span>
-              <?php echo e($data->claim_status); ?>
+              {{ $data->claim_status }}
             </span>
           </td>
-          <td class="td-action"><a href="/edit?id=<?php echo e($data->id); ?>" class="button">Update</a></td>
+          <td class="td-action"><a href="/edit?id={{ $data->id }}" class="button">Update</a></td>
         </tr>
-      <?php endforeach; ?>
-    <?php endif; ?>
+      @endforeach
+    @endif
   </table>
 
 </div>
