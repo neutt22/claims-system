@@ -91,6 +91,8 @@ class HomeController extends Controller
         $info->amount = $this->request->input('amount');
         $info->stage = 1;
         $info->claim_status = 'pending';
+        $info->scanned = 'no';
+        $info->transmitted = 'no';
 
         if( $info->save() ) {
             return view('new_record')->with('message', 'New item has been recorded.');
