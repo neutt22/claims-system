@@ -22,7 +22,7 @@
         <li><a class="hint--left" data-hint="I hate to see you go." href="/logout">Log Out</a></li>
       </ul>
     </div>
-    <h3>Claims System v.0.1</h3>
+    <h3>Claims System v.0.2</h3>
   </div>
 
   <div style="text-align: center;">
