@@ -93,6 +93,8 @@ class HomeController extends Controller
         $info->claim_status = 'pending';
         $info->scanned = 'no';
         $info->transmitted = 'no';
+        $info->followed_up = 'no';
+        $info->check_released = 'no';
 
         if( $info->save() ) {
             return view('new_record')->with('message', 'New item has been recorded.');
