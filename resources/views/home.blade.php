@@ -51,6 +51,10 @@
     </p>
   @endif
 
+  <div class="qebcH">
+    <button class="button hint--right" data-hint="Quick export. Go to Profile > Reports for more options." id="qebH">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
+  </div>
+
   <table style="width:100%">
     <tr>
       <th>Principal</th>
