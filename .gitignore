@@ -3,5 +3,6 @@
 Homestead.yaml
 Homestead.json
 **/.sass-cache/*
+**/.idea/*
 .env
 .idea/

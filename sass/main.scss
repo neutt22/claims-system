@@ -293,11 +293,26 @@ form#stage-1 > a {
 	}
 	width: 260px;
 	div:nth-child(3) {
+		position: relative;
 		margin-top: 4px;
 		text-align: right;
 		font-size: 11px;
-		a {
-			color: $font_color;	
+		button {
+			margin-top: 2px;
+			color: $font_color;
+			text-decoration: underline;
+		}
+		.assm {
+			display: none;
+			position: absolute;
+			z-index: 2;
+			padding: 20px 15px;
+			text-align: left;
+			background: red;
+			h3, h4 {
+				margin: 0;
+				text-decoration: underline;
+			}
 		}
 	}
 	.search-box {
