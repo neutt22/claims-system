@@ -41,7 +41,10 @@
       <img src="{{ asset('img/search.png') }}">
     </div>
     <div>
-      <a href="#">advanced</a>
+      <button id="adv-btn">advanced</button>
+      <div class="assm">
+        <h3><strong>Advanced Search Options</strong></h3>
+      </div>
     </div>
   </div>
 
@@ -115,6 +118,10 @@
 
     $('#pa').click(function(){
       $('#dropdown').toggle();
+    });
+
+    $('#adv-btn').click(function(){
+      $('.assm').toggle();
     });
 
   });
