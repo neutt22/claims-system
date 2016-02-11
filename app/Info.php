@@ -33,6 +33,19 @@ class Info extends Model
 
     public function processStage2(Request $request) {
 
+    	$info = Info::find($request->input('id'));
+
+		$scanned = is_null($request->input('scanned')) ? 'no' : 'yes';    	
+		$transmitted = is_null($request->input('trans_mico')) ? 'no' : 'yes';
+
+		$info->scanned = $scanned;
+		$info->transmitted = $transmitted;
+
+		if( $info->save() ) {
+            return redirect()->route('home')->with('message', 'Stage 2 record has been updated.');
+        }else {
+            return 'Something went wrong recording, please contact master Jim from GIBX';
+        }
     }
 
     public function processStage3(Request $request) {
