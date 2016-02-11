@@ -50,6 +50,19 @@ class Info extends Model
 
     public function processStage3(Request $request) {
 
+    	$info = Info::find($request->input('id'));
+
+    	$followup_comments = $request->input('followup_comments');
+    	$followed_up = is_null($request->input('followed_up')) ? 'no' : 'yes';
+
+    	$info->followup_comments = $followup_comments;
+    	$info->followed_up = $followed_up;
+
+    	if( $info->save() ) {
+            return redirect()->route('home')->with('message', 'Stage 3 record has been updated.');
+        }else {
+            return 'Something went wrong recording, please contact master Jim from GIBX';
+        }
     }
 
     public function processStage4(Request $request) {

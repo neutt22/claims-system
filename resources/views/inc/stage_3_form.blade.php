@@ -7,8 +7,8 @@
 		</p>
 
 		<form id="stage-3" action="/edit" method="post">
-			<textarea name="followup_comments" placeholder="follow up status here..."></textarea>
-			<label style="cursor: pointer;"><input type="checkbox" name="followed_up" value="yes">Followed Up</label><br/>
+			<textarea name="followup_comments" placeholder="follow up status here...">{{ $info->followup_comments }}</textarea>
+			<label style="cursor: pointer;"><input type="checkbox" name="followed_up" value="yes" {{ $info->followed_up == 'yes' ? 'checked' : ''}}>Followed Up</label><br/>
 			<span><small>*please double check fields before submitting</small></span><br/>
 			<input type="hidden" name="id" value="{{ $info->id }}">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
