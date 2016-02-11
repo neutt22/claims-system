@@ -4,3 +4,4 @@ Homestead.yaml
 Homestead.json
 **/.sass-cache/*
 .env
+.idea/
