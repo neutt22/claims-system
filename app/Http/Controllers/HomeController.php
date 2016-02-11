@@ -18,7 +18,6 @@ class HomeController extends Controller
     public function index() {
     	
     	$total = Info::all()->count();
-
     	$chart_inc = [];
     	$chart_inc['dm'] = Info::where('dm', '=', '')->get()->count();
     	$chart_inc['policy'] = Info::where('policy', '=', '')->get()->count();
