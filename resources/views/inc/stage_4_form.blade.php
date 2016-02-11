@@ -10,7 +10,7 @@
 		</p>
 
 		<form id="stage-3" action="/edit" method="post">
-			<label style="cursor: pointer;"><input type="checkbox" name="released" value="yes">Check Released</label><br>
+			<label style="cursor: pointer;"><input type="checkbox" name="released" value="yes" {{ $info->check_released == 'yes' ? 'checked' : ''}}>Check Released</label><br>
 			<span><small>*please double check fields before submitting</small></span><br/>
 			<input type="hidden" name="id" value="{{ $info->id }}">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">

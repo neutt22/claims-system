@@ -67,5 +67,16 @@ class Info extends Model
 
     public function processStage4(Request $request) {
 
+    	$info = Info::find($request->input('id'));
+
+    	$check_released = is_null($request->input('released')) ? 'no' : 'yes';
+
+    	$info->check_released = $check_released;
+
+    	if( $info->save() ) {
+            return redirect()->route('home')->with('message', 'Stage 4 record has been updated.');
+        }else {
+            return 'Something went wrong recording, please contact master Jim from GIBX';
+        }
     }
 }
