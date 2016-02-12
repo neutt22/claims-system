@@ -59,7 +59,7 @@
   </div>
 
   <table style="width:100%">
-    <tr>
+    <thead>
       <th>Principal</th>
       <th>Claimant</th>
       <th>COC</th>
@@ -69,7 +69,9 @@
       <th>Amount</th>
       <th>Stage</th>
       <th>Status</th>
-    </tr>
+      <th>Update</th>
+    </thead>
+    <tbody>
     @if( count($info) > 0 )
       @foreach( $info as $data)
         <tr>
@@ -106,6 +108,7 @@
         </tr>
       @endforeach
     @endif
+    </tbody>
   </table>
 
 </div>
