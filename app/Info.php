@@ -24,8 +24,15 @@ class Info extends Model
         $info->documents_comments = $request->input('docs_comments');
         $info->amount = $request->input('amount');
 
+        $message = 'Record has been updated.';
+
+        if($request->input('docs') == 'complete' && $info->stage == 1){
+            $info->stage = 2;
+            $message = "Record has been updated. Congrats! The claimant is on <strong>stage 2</strong>.";
+        }
+
         if( $info->save() ) {
-            return redirect()->route('home')->with('message', 'Record has been updated.');
+            return redirect()->route('home')->with('message', $message);
         }else {
             return 'Something went wrong recording, please contact master Jim from GIBX';
         }

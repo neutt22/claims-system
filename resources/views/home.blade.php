@@ -50,7 +50,7 @@
 
   @if( isset($message) )
     <p class="success">
-      {{ $message }}
+      {!! $message !!}
     </p>
   @endif
 
