@@ -6,7 +6,7 @@ $wrapper_color: #e5f7ff;
 $font_color: #404040;
 
 * {
-	box-sizing: border-box;
+	@include box-sizing(border-box);
 	outline: none;
 }
 
