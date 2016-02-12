@@ -48,8 +48,15 @@ class Info extends Model
 		$info->scanned = $scanned;
 		$info->transmitted = $transmitted;
 
+        $message = 'Record has been updated.';
+
+        if($scanned == 'yes' && $transmitted == 'yes' && $info->stage == 2) {
+            $info->stage = 3;
+            $message = "Record has been updated. Congrats! The claimant is on <strong>stage 3</strong>.";
+        }
+
 		if( $info->save() ) {
-            return redirect()->route('home')->with('message', 'Stage 2 record has been updated.');
+            return redirect()->route('home')->with('message', $message);
         }else {
             return 'Something went wrong recording, please contact master Jim from GIBX';
         }

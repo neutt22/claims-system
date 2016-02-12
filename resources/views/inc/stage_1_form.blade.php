@@ -31,6 +31,7 @@
 			<input type="hidden" name="id" value="{{ $info->id }}">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">
 			<input type="hidden" name="stage" value="1">
-			<input type="submit" value="Update" class="button" />
+			{{--<input type="submit" value="Update" class="button" />--}}
+			<input type="submit" value="Update" class="button" {{ $info->stage != 1 ? 'disabled' : '' }}/>
 			<a href="/">cancel</a>
 		</form>
