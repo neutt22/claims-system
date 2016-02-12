@@ -104,7 +104,7 @@
               {{ $data->claim_status }}
             </span>
           </td>
-          <td class="td-action"><a href="/edit?id={{ $data->id }}" class="button">Update</a></td>
+          <td class="td-action"><a href="/edit?id={{ $data->id }}" class="upd-button">Update</a></td>
         </tr>
       @endforeach
     @endif

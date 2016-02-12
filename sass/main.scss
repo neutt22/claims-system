@@ -135,6 +135,13 @@ table {
 	border-collapse: collapse;
 }
 
+.upd-button {
+	color: #004c99;
+	&:hover{
+		color: darken(#33aaff, 1%);
+	}
+}
+
 /* BUTTON ===================================*/
 
 .button {
