@@ -72,8 +72,15 @@ class Info extends Model
     	$info->followup_comments = $followup_comments;
     	$info->followed_up = $followed_up;
 
+        $message = 'Record has been updated.';
+
+        if($followed_up == 'yes' && $info->stage == 3) {
+            $info->stage = 4;
+            $message = "Record has been updated. Congrats! The claimant is on <strong>stage 4</strong>.";
+        }
+
     	if( $info->save() ) {
-            return redirect()->route('home')->with('message', 'Stage 3 record has been updated.');
+            return redirect()->route('home')->with('message', $message);
         }else {
             return 'Something went wrong recording, please contact master Jim from GIBX';
         }
@@ -87,8 +94,16 @@ class Info extends Model
 
     	$info->check_released = $check_released;
 
-    	if( $info->save() ) {
-            return redirect()->route('home')->with('message', 'Stage 4 record has been updated.');
+        $message = 'Record has been updated.';
+
+        if($check_released == 'yes' && $info->stage == 4) {
+            $info->stage = 0;
+            $info->claim_status = 'approved';
+            $message = "Record has been updated. Congrats! The claimant has finished the new GIBX claim process.";
+        }
+
+        if( $info->save() ) {
+            return redirect()->route('home')->with('message', $message);
         }else {
             return 'Something went wrong recording, please contact master Jim from GIBX';
         }
