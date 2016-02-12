@@ -374,17 +374,16 @@ form#stage-1 > a {
 /* line 310, ../sass/main.scss */
 .search-wrapper div:nth-child(3) {
   position: relative;
-  margin-top: 4px;
+  margin-top: 1px;
   text-align: right;
   font-size: 11px;
 }
 /* line 315, ../sass/main.scss */
 .search-wrapper div:nth-child(3) button {
-  margin-top: 2px;
   color: #404040;
   text-decoration: underline;
 }
-/* line 320, ../sass/main.scss */
+/* line 319, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm {
   display: none;
   position: absolute;
@@ -393,12 +392,12 @@ form#stage-1 > a {
   text-align: left;
   background: red;
 }
-/* line 327, ../sass/main.scss */
+/* line 326, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm h3, .search-wrapper div:nth-child(3) .assm h4 {
   margin: 0;
   text-decoration: underline;
 }
-/* line 333, ../sass/main.scss */
+/* line 332, ../sass/main.scss */
 .search-wrapper .search-box {
   display: inline-block;
   vertical-align: middle;
@@ -410,15 +409,14 @@ form#stage-1 > a {
   border: 1px solid #0066cc;
   padding: 3px;
   position: relative;
-  top: 8px;
   right: -9px;
 }
-/* line 342, ../sass/main.scss */
+/* line 340, ../sass/main.scss */
 .search-wrapper .search-box input {
   outline: none;
   border: 0px;
 }
-/* line 346, ../sass/main.scss */
+/* line 344, ../sass/main.scss */
 .search-wrapper .search-box img {
   position: absolute;
   width: 20px;

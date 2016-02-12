@@ -309,11 +309,10 @@ form#stage-1 > a {
 	width: 260px;
 	div:nth-child(3) {
 		position: relative;
-		margin-top: 4px;
+		margin-top: 1px;
 		text-align: right;
 		font-size: 11px;
 		button {
-			margin-top: 2px;
 			color: $font_color;
 			text-decoration: underline;
 		}
@@ -337,7 +336,6 @@ form#stage-1 > a {
 		border: 1px solid $theme_color;
 		padding: 3px;
 		position: relative;
-		top: 8px;
 		right: -9px;
 		input {
 			outline: none;
