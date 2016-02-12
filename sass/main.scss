@@ -189,7 +189,7 @@ form#stage-1 input {
 }
 
 form#stage-1 input[type='checkbox'] {
-	display: inline-block;
+	@include inline-block;
 }
 
 form#stage-1 select {
@@ -204,14 +204,14 @@ form#stage-1 > textarea, #stage-3 textarea {
 }
 
 form#stage-1 span, #stage-2 span, #stage-3 span, #stage-4 span {
-	display: inline-block;
+	@include inline-block;
 	margin-bottom: 10px;
 	font-size: 15px;
 }
 
 form#stage-1 input[type='submit'], #stage-2 input[type='submit'],
 form#stage-3 input[type='submit'], #stage-4 input[type='submit'] {
-	display: inline-block;
+	@include inline-block;
 	margin-right: 30px;
 }
 
@@ -292,7 +292,7 @@ form#stage-1 > a {
 
 .search-wrapper {
 	label {
-		display: inline-block;
+		@include inline-block;
 		width: 20%;
 	}
 	width: 260px;
@@ -320,7 +320,7 @@ form#stage-1 > a {
 		}
 	}
 	.search-box {
-		display: inline-block;
+		@include inline-block;
 		width: 75%;
 		overflow: hidden;
 		border: 1px solid $theme_color;
