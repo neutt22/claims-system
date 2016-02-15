@@ -61,9 +61,9 @@ class Info extends Model
             $approved += $a->amount;
         }
 
-        $claims_amount['pending'] = number_format($pending, 2);
-        $claims_amount['total'] = number_format($total, 2);
-        $claims_amount['approved'] = number_format($approved, 2);
+        $claims_amount['pending'] = $pending;
+        $claims_amount['total'] = $total;
+        $claims_amount['approved'] = $approved;
 
         return $claims_amount;
     }

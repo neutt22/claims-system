@@ -51,15 +51,15 @@
   <div class="claims-stat">
     <div class="total-claims-pending">
       <h4>Pending Claims</h4>
-      <span>Php{{ $claims_amount['pending'] }}</span>
+      <span>Php</span><span class="count-pending"></span>
     </div>
     <div class="total-claims">
       <h4>Total Claims</h4>
-      <span>Php{{ $claims_amount['total'] }}</span>
+      <span>Php</span><span class="count-total"></span>
     </div>
     <div class="total-claims-approved">
       <h4>Claims Approved</h4>
-      <span>Php{{ $claims_amount['approved'] }}</span>
+      <span>Php</span><span class="count-approved"></span>
     </div>
   </div>
 
@@ -154,6 +154,47 @@
         $(window).attr('location', '/{{ $column }}/desc');
       }
     });
+
+    $({countNum: $('.count-pending').text()}).animate({
+      countNum: {{ $claims_amount['pending'] }}
+    }, {
+      duration: 4000,
+      easing:'linear',
+      step: function() {
+        $('.count-pending').text(Math.floor(this.countNum));
+      },
+      complete: function() {
+        $('.count-pending').text( '{{ number_format($claims_amount['pending'], 2) }}');
+      }
+    });
+
+    $({countNum: $('.count-total').text()}).animate({
+      countNum: {{ $claims_amount['total'] }}
+    }, {
+      duration: 4000,
+      easing:'linear',
+      step: function() {
+        $('.count-total').text(Math.floor(this.countNum));
+      },
+      complete: function() {
+        $('.count-total').text( '{{ number_format($claims_amount['total'], 2) }}');
+      }
+    });
+
+    $({countNum: $('.count-approved').text()}).animate({
+      countNum: {{ $claims_amount['approved'] }}
+    }, {
+      duration: 4000,
+      easing:'linear',
+      step: function() {
+        $('.count-approved').text(Math.floor(this.countNum));
+      },
+      complete: function() {
+        $('.count-approved').text( '{{ number_format($claims_amount['approved'], 2) }}');
+      }
+    });
+
+
 
   });
 </script>
