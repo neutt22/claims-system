@@ -89,7 +89,7 @@ class Info extends Model
         }
 
         if( $info->save() ) {
-            return redirect()->route('home')->with('message', $message);
+            return redirect()->to('/encoded/desc')->with('message', $message);
         }else {
             return 'Something went wrong recording, please contact master Jim from GIBX';
         }
@@ -113,7 +113,7 @@ class Info extends Model
         }
 
 		if( $info->save() ) {
-            return redirect()->route('home')->with('message', $message);
+            return redirect()->to('/encoded/desc')->with('message', $message);
         }else {
             return 'Something went wrong recording, please contact master Jim from GIBX';
         }
@@ -137,7 +137,7 @@ class Info extends Model
         }
 
     	if( $info->save() ) {
-            return redirect()->route('home')->with('message', $message);
+            return redirect()->to('/encoded/desc')->with('message', $message);
         }else {
             return 'Something went wrong recording, please contact master Jim from GIBX';
         }
@@ -160,7 +160,7 @@ class Info extends Model
         }
 
         if( $info->save() ) {
-            return redirect()->route('home')->with('message', $message);
+            return redirect()->to('/encoded/desc')->with('message', $message);
         }else {
             return 'Something went wrong recording, please contact master Jim from GIBX';
         }
