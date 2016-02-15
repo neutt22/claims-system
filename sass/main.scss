@@ -47,7 +47,6 @@ ul#dropdown {
 	background: #f2f2f2;
 	padding: 0;
 	width: 80%;
-	margin: 0;
 	margin: 0 auto;
 	margin-top: 10px;
 	border: 1px solid #d9d9d9;
@@ -371,3 +370,40 @@ form#stage-1 > a {
 	}
 }
 
+/* SORT BY ===================================*/
+
+.sort-by {
+	float: right;
+	text-align: center;
+	margin: 0 30px 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 13px;
+	li:hover .sort-by-menu {
+		display: block;
+	}
+	li span {
+		@include inline-block;
+		color: blue;
+	}
+	.sort-by-menu {
+		position: absolute;
+		display: none;
+		list-style: none;
+		padding: 0;
+		border: 1px solid #d9d9d9;
+		li a {
+			display: block;
+			text-decoration: none;
+			color: $font_color;
+			//background: #f2f2f2;
+			background: rgba(#f2f2f2, 0.94);
+			padding: 4px 10px;
+			border-bottom: 1px solid #d9d9d9;
+			&:hover {
+				color: #d9d9d9;
+				background: #404040;
+			}
+		}
+	}
+}
