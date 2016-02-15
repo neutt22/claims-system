@@ -22,7 +22,7 @@
         <li><a class="hint--left" data-hint="I hate to see you go." href="/logout">Log Out</a></li>
       </ul>
     </div>
-    <h3>Claims System v.0.2</h3>
+    <h3>Claims System v.0.4</h3>
   </div>
 
   <div style="text-align: center;">
@@ -71,35 +71,20 @@
 
   <div class="qebcH">
     <button class="button hint--right" data-hint="Quick export. Go to Profile > Reports for more options." id="qebH">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
-    <ul class="sort-by">
-      <li>
-        [ <span>Sort By</span> ]
-        <ul class="sort-by-menu">
-          <li><a href="#">Principal</a></li>
-          <li><a href="#">Claimant</a></li>
-          <li><a href="#">COC</a></li>
-          <li><a href="#">Documents</a></li>
-          <li><a href="#">Inception</a></li>
-          <li><a href="#">Encoded</a></li>
-          <li><a href="#">Amount</a></li>
-          <li><a href="#">Stage</a></li>
-          <li><a href="#">Status</a></li>
-        </ul>
-      </li>
-    </ul>
+    @include('inc.sort_by')
   </div>
 
   <table style="width:100%">
     <thead>
-      <th>Principal</th>
-      <th>Claimant</th>
-      <th>COC</th>
-      <th>Documents</th>
-      <th>Inception</th>
-      <th>Encoded</th>
-      <th>Amount</th>
-      <th>Stage</th>
-      <th>Status</th>
+      <th>Principal {{ $column == 'name' ? $symbol : '' }}</th>
+      <th>Claimant {{ $column == 'claimant' ? $symbol : '' }}</th>
+      <th>COC {{ $column == 'coc' ? $symbol : '' }}</th>
+      <th>Documents {{ $column == 'documents' ? $symbol : '' }}</th>
+      <th>Inception {{ $column == 'inception' ? $symbol : '' }}</th>
+      <th>Encoded {{ $column == 'encoded' ? $symbol : '' }}</th>
+      <th>Amount {{ $column == 'amount' ? $symbol : '' }}</th>
+      <th>Stage {{ $column == 'stage' ? $symbol : '' }}</th>
+      <th>Status {{ $column == 'status' ? $symbol : '' }}</th>
       <th>Update</th>
     </thead>
     <tbody>
@@ -142,6 +127,10 @@
     </tbody>
   </table>
 
+  <div class="qebcH">
+    <button class="button hint--right" data-hint="Quick export. Go to Profile > Reports for more options." id="qebH">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
+  </div>
+
 </div>
 @stop
 
@@ -156,6 +145,14 @@
 
     $('#adv-btn').click(function(){
       $('.assm').toggle();
+    });
+
+    $('input:checkbox').change(function(){
+      if( $(this).is(':checked')){
+        $(window).attr('location', '/{{ $column }}/asc');
+      }else{
+        $(window).attr('location', '/{{ $column }}/desc');
+      }
     });
 
   });

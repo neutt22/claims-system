@@ -138,7 +138,7 @@ tbody tr:hover {
 
 /* line 132, ../sass/main.scss */
 table {
-  margin-top: 10px;
+  margin: 10px 0;
   border-collapse: collapse;
 }
 
@@ -483,7 +483,7 @@ form#stage-1 > a {
   border: 1px solid #d9d9d9;
 }
 /* line 395, ../sass/main.scss */
-.sort-by .sort-by-menu li a {
+.sort-by .sort-by-menu li a, .sort-by .sort-by-menu li label {
   display: block;
   text-decoration: none;
   color: #404040;
@@ -492,7 +492,7 @@ form#stage-1 > a {
   border-bottom: 1px solid #d9d9d9;
 }
 /* line 403, ../sass/main.scss */
-.sort-by .sort-by-menu li a:hover {
+.sort-by .sort-by-menu li a:hover, .sort-by .sort-by-menu li label:hover {
   color: #d9d9d9;
   background: #404040;
 }

@@ -11,6 +11,30 @@ class Info extends Model
 
     protected $dates = ['encoded', 'inception'];
 
+    public function getColumn($column)
+    {
+        if( \Schema::hasColumn('infos', $column)){
+            return $column;
+        }
+        return 'column';
+    }
+
+    public function getType($type)
+    {
+        if($type == 'asc') return 'asc';
+        if($type == 'desc') return 'desc';
+
+        return 'desc';
+    }
+
+    public function getSymbol($type)
+    {
+        if($type == 'asc') return '&#x25B2;';
+        if($type == 'desc') return '&#x25BC;';
+
+        return '&#x25BC;';
+    }
+
     public function claimsAmount() {
         $claims_amount = [];
         $total = 0;

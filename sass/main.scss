@@ -130,7 +130,7 @@ tbody tr:hover {
 }
 
 table {
-	margin-top: 10px;
+	margin: 10px 0;
 	border-collapse: collapse;
 }
 
@@ -392,7 +392,7 @@ form#stage-1 > a {
 		list-style: none;
 		padding: 0;
 		border: 1px solid #d9d9d9;
-		li a {
+		li a, li label {
 			display: block;
 			text-decoration: none;
 			color: $font_color;

@@ -15,7 +15,7 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(Info $i) {
+    public function index(Info $i, $column = 'id', $type = null) {
     	
     	$total = Info::all()->count();
     	$chart_inc = [];
@@ -55,6 +55,9 @@ class HomeController extends Controller
     	$months['dec'] = Info::whereMonth('encoded', '=', '12')->get()->count();
 
         $claims_amount = $i->claimsAmount();
+
+        $column = $i->getColumn($column);
+        $type = $i->getType($type);
     	
     	return view('home')
     		->with('chart_inc', $chart_inc)
@@ -62,9 +65,12 @@ class HomeController extends Controller
     		->with('stages', $stages)
     		->with('stats', $stats)
     		->with('months', $months)
-    		->with('info', Info::orderBy('id', 'DESC')->get())
+    		->with('info', Info::orderBy($column, $type)->get())
             ->with('claims_amount', $claims_amount)
-            ->with('message', session('message'));
+            ->with('message', session('message'))
+            ->with('type', $type)
+            ->with('column', $column)
+            ->with('symbol', $i->getSymbol($type));
     }
 
     public function new_record() {
