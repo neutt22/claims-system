@@ -423,3 +423,31 @@ form#stage-1 > a {
   right: 2px;
   top: 2px;
 }
+
+/* TEXT STATUS ===================================*/
+/* line 355, ../sass/main.scss */
+.claims-stat {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-family: 'Lato', Helvetica;
+  font-weight: 300;
+  vertical-align: top;
+  width: 80%;
+  text-align: center;
+}
+/* line 362, ../sass/main.scss */
+.claims-stat .total-claims-pending, .claims-stat .total-claims, .claims-stat .total-claims-approved {
+  display: inline-block;
+  margin: auto 30px;
+}
+/* line 365, ../sass/main.scss */
+.claims-stat .total-claims-pending h4, .claims-stat .total-claims h4, .claims-stat .total-claims-approved h4 {
+  margin-top: 0;
+}
+/* line 368, ../sass/main.scss */
+.claims-stat .total-claims-pending span, .claims-stat .total-claims span, .claims-stat .total-claims-approved span {
+  font-size: 2em;
+}

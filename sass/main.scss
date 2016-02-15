@@ -350,3 +350,24 @@ form#stage-1 > a {
 	}
 }
 
+/* TEXT STATUS ===================================*/
+
+.claims-stat {
+	@include inline-block;
+	font-family: 'Lato', Helvetica;
+	font-weight: 300;
+	vertical-align: top;
+	width: 80%;
+	text-align: center;
+	.total-claims-pending, .total-claims, .total-claims-approved {
+		display: inline-block;
+		margin: auto 30px;
+		h4 {
+			margin-top: 0;
+		}
+		span {
+			font-size: 2em;
+		}
+	}
+}
+
