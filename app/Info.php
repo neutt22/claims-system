@@ -11,6 +11,39 @@ class Info extends Model
 
     protected $dates = ['encoded', 'inception'];
 
+    public function claimsAmount() {
+        $claims_amount = [];
+        $total = 0;
+        $pending = 0;
+        $approved = 0;
+
+        // Fetch amounts
+        $totalO = Info::all(['amount']);
+        $pending0 = Info::where('claim_status', '=', 'pending')->get(['amount']);
+        $approved0 = Info::where('claim_status', '=', 'approved')->get(['amount']);
+
+        // Calculate total claims
+        foreach($totalO as $t ) {
+            $total += $t->amount;
+        }
+
+        // Calculate total pending claims
+        foreach($pending0 as $p) {
+            $pending += $p->amount;
+        }
+
+        // Calculate total approved claims
+        foreach($approved0 as $a) {
+            $approved += $a->amount;
+        }
+
+        $claims_amount['pending'] = number_format($pending, 2);
+        $claims_amount['total'] = number_format($total, 2);
+        $claims_amount['approved'] = number_format($approved, 2);
+
+        return $claims_amount;
+    }
+
     public function processStage1(Request $request) {
 
         $info = Info::find($request->input('id'));

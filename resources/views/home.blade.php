@@ -51,15 +51,15 @@
   <div class="claims-stat">
     <div class="total-claims-pending">
       <h4>Pending Claims</h4>
-      <span>Php353,104.45</span>
+      <span>Php{{ $claims_amount['pending'] }}</span>
     </div>
     <div class="total-claims">
       <h4>Total Claims</h4>
-      <span>Php353,104.45</span>
+      <span>Php{{ $claims_amount['total'] }}</span>
     </div>
     <div class="total-claims-approved">
       <h4>Claims Approved</h4>
-      <span>Php353,104.45</span>
+      <span>Php{{ $claims_amount['approved'] }}</span>
     </div>
   </div>
 
