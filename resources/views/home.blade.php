@@ -159,7 +159,7 @@
       countNum: {{ $claims_amount['pending'] }}
     }, {
       duration: 4000,
-      easing:'linear',
+      easing:'swing',
       step: function() {
         $('.count-pending').text(Math.floor(this.countNum));
       },
@@ -172,7 +172,7 @@
       countNum: {{ $claims_amount['total'] }}
     }, {
       duration: 4000,
-      easing:'linear',
+      easing:'swing',
       step: function() {
         $('.count-total').text(Math.floor(this.countNum));
       },
@@ -185,7 +185,7 @@
       countNum: {{ $claims_amount['approved'] }}
     }, {
       duration: 4000,
-      easing:'linear',
+      easing:'swing',
       step: function() {
         $('.count-approved').text(Math.floor(this.countNum));
       },
