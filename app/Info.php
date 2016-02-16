@@ -191,6 +191,7 @@ class Info extends Model
             if($m == 3) break;
         }
 
-        return $today->format('m/d/Y h:i A');
+        return $today;
+//        return $today->format('m/d/Y h:i A');
     }
 }
