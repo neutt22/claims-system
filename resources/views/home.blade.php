@@ -142,6 +142,7 @@
       <th>Encoded {{ $column == 'encoded' ? $symbol : '' }}</th>
       <th>Amount {{ $column == 'amount' ? $symbol : '' }}</th>
       <th>Stage {{ $column == 'stage' ? $symbol : '' }}</th>
+      <th>Deadline {{ $column == 'dead_line' ? $symbol : '' }}</th>
       <th>Status {{ $column == 'status' ? $symbol : '' }}</th>
       <th>Update</th>
     </thead>
@@ -172,6 +173,9 @@
           </td>
           <td>
             {{ $data->stage }}
+          </td>
+          <td>
+            {{ $data->dead_line->format('m/d/Y h:i A') }}
           </td>
           <td>
             <span>
