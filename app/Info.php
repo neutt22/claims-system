@@ -2,6 +2,7 @@
 
 namespace App;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
@@ -9,7 +10,7 @@ class Info extends Model
 {
     protected $fillable = array('name', 'claimant', 'coc');
 
-    protected $dates = ['encoded', 'inception'];
+    protected $dates = ['encoded', 'inception', 'dead_line'];
 
     public function getColumn($column)
     {
@@ -164,5 +165,33 @@ class Info extends Model
         }else {
             return 'Something went wrong recording, please contact master Jim from GIBX';
         }
+    }
+
+    public function getDeadLine()
+    {
+        $today = Carbon::now('Asia/Manila');
+
+        $m = 0;
+
+        while(true){
+
+            $today = $today->addDay(1);
+
+            if($today->dayOfWeek != Carbon::SATURDAY && $today->dayOfWeek != Carbon::SUNDAY){
+
+                \Log::info("Count: $m");
+                \Log::info("Date: " . $today);
+                \Log::info("Day Of Week: " . $today->dayOfWeek);
+            }else {
+                \Log::info('Its weekends');
+                $m -= 1;
+            }
+
+            $m += 1;
+
+            if($m == 3) break;
+        }
+
+        return $today->format('m/d/Y h:i A');
     }
 }

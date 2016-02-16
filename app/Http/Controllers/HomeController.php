@@ -12,7 +12,12 @@ class HomeController extends Controller
 
     public function __construct(Request $request){
     	$this->request = $request;
-        $this->middleware('auth');
+//        $this->middleware('auth');
+    }
+
+    public function getDeadLine(Info $i)
+    {
+        return $i->getDeadLine();
     }
 
     public function index(Info $i, $column = 'id', $type = null) {
