@@ -43,7 +43,65 @@
     <div>
       <button id="adv-btn">advanced</button>
       <div class="assm">
-        <h3><strong>Advanced Search Options</strong></h3>
+        <h2>Advanced Search Options</h2>
+        <hr>
+        <form action="" method="get">
+          <div class="adv-element">
+            <div class="adv-1st-col">
+              <label for="adv-principal"><input id="adv-principal" type="checkbox" name="adv-principal"> Has Principal: </label>
+            </div>
+            <div class="adv-2nd-col">
+              <input type="text" name="adv-principal" placeholder="principal name...">
+            </div>
+          </div>
+          <div class="adv-element">
+            <div class="adv-1st-col">
+              <label for="adv-claimant"><input id="adv-claimant" type="checkbox" name="adv-claimant"> Has Claimant: </label>
+            </div>
+            <div class="adv-2nd-col">
+              <input type="text" name="adv-claimant" placeholder="claimant name...">
+            </div>
+          </div>
+          <div class="adv-element">
+            <div class="adv-1st-col">
+              <label for="coc-check"><input id="coc-check" type="checkbox" name="coc-check"> Has COC: </label>
+            </div>
+            <div class="adv-2nd-col">
+              <input type="text" name="coc-text" placeholder="coc number...">
+            </div>
+          </div>
+          <div class="adv-element">
+            <div class="adv-1st-col">
+              <label for="dm-check"><input id="dm-check" type="checkbox" name="dm-check"> Has DM: </label>
+            </div>
+            <div class="adv-2nd-col">
+              <input type="text" name="dm-text" placeholder="dm number...">
+            </div>
+          </div>
+          <div class="adv-element">
+            <div class="adv-1st-col">
+              <label for="policy-check"><input id="policy-check" type="checkbox" name="policy-check"> Has Policy: </label>
+            </div>
+            <div class="adv-2nd-col">
+              <input type="text" name="policy-text" placeholder="policy number...">
+            </div>
+          </div>
+          <div class="adv-element">
+            <div class="adv-1st-col">
+              <label for="status-check"><input id="status-check" type="checkbox" name="status-check"> Has Status: </label>
+            </div>
+            <div class="adv-2nd-col">
+              <select name="status-select" id="status-select">
+                <option value="">Pending</option>
+                <option value="">Approved</option>
+                <option value="">Closed</option>
+                <option value="">Denied</option>
+              </select>
+            </div>
+          </div>
+          <input type="hidden" name="_token" value="{{ csrf_token() }}">
+          <input type="submit" value="Search" class="button">
+        </form>
       </div>
     </div>
   </div>
@@ -69,8 +127,8 @@
     </p>
   @endif
 
-  <div class="qebcH">
-    <button class="button hint--right" data-hint="Quick export. Go to Profile > Reports for more options." id="qebH">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
+  <div>
+    <button class="button hint--right qeb" data-hint="Quick export. Go to Profile > Reports for more options.">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
     @include('inc.sort_by')
   </div>
 
@@ -127,8 +185,8 @@
     </tbody>
   </table>
 
-  <div class="qebcH">
-    <button class="button hint--right" data-hint="Quick export. Go to Profile > Reports for more options." id="qebH">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
+  <div>
+    <button class="button hint--right qeb" data-hint="Quick export. Go to Profile > Reports for more options.">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
   </div>
 
 </div>
