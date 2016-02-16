@@ -24,7 +24,7 @@
 
 			<textarea name="docs_comments" placeholder="your documents' comments">{{ $info->documents_comments }}</textarea>
 
-			<span>Encoded: <small>{{ \Carbon\Carbon::parse($info->encoded)->format('m/d/Y') }} </small></span>
+			<span>Encoded: <small>{{ \Carbon\Carbon::parse($info->encoded)->format('m/d/Y h:i A') }} </small></span>
 			
 			<input type="text" name="amount" placeholder="enter claim amount"  value="{{ $info->amount }}"/>
 			<span><small>*please double check fields before submitting</small></span><br/>
