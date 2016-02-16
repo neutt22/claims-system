@@ -40,7 +40,7 @@
 
 		<textarea name="docs_comments" placeholder="your documents' comments"></textarea>
 
-		<span>Encoded: <small>{{ \Carbon\Carbon::now()->toDayDateTimeString() }} </small></span>
+		<span>Encoded: <small>{{ \Carbon\Carbon::now('Asia/Manila')->format('m/d/Y h:i A') }} </small></span>
 		
 		<input type="text" name="amount" placeholder="enter claim amount" />
 		<span><small>*please double check fields before submitting</small></span><br/>
