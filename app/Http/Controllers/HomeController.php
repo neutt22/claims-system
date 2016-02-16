@@ -12,7 +12,7 @@ class HomeController extends Controller
 
     public function __construct(Request $request){
     	$this->request = $request;
-//        $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     public function getDeadLine(Info $i)
@@ -108,6 +108,7 @@ class HomeController extends Controller
         $info->transmitted = 'no';
         $info->followed_up = 'no';
         $info->check_released = 'no';
+        $info->dead_line = $info->getDeadLine();
 
         if( $info->save() ) {
             return view('new_record')->with('message', 'New item has been recorded.');

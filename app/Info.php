@@ -169,26 +169,25 @@ class Info extends Model
 
     public function getDeadLine()
     {
+        // Stage has been triggered. Get date/time now.
         $today = Carbon::now('Asia/Manila');
 
         $m = 0;
 
         while(true){
 
+            // Add one(1) day starting now.
             $today = $today->addDay(1);
 
-            if($today->dayOfWeek != Carbon::SATURDAY && $today->dayOfWeek != Carbon::SUNDAY){
-
-                \Log::info("Count: $m");
-                \Log::info("Date: " . $today);
-                \Log::info("Day Of Week: " . $today->dayOfWeek);
-            }else {
-                \Log::info('Its weekends');
+            // Check if the day is either Sat or Sun, if yes, adjust the day by one(1).
+            if($today->dayOfWeek == Carbon::SATURDAY || $today->dayOfWeek == Carbon::SUNDAY) {
                 $m -= 1;
             }
 
             $m += 1;
 
+            // Max days per stage is 3.
+            //TODO: Check if STAGE == 3, if yes, adjust 3 to 4.
             if($m == 3) break;
         }
 
