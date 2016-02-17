@@ -23,7 +23,10 @@ class HomeController extends Controller
 
     public function index(Info $i, $column = 'id', $type = null) {
 
-        $infos = Info::all();
+        $column = $i->getColumn($column);
+        $type = $i->getType($type);
+
+        $infos = Info::orderBy($column, $type)->get();
 
     	$total = $infos->count();
 
@@ -87,16 +90,13 @@ class HomeController extends Controller
 
         $claims_amount = $i->claimsAmount($infos);
 
-        $column = $i->getColumn($column);
-        $type = $i->getType($type);
-    	
     	return view('home')
     		->with('chart_inc', $chart_inc)
     		->with('chart_complete', $chart_complete)
     		->with('stages', $stages)
     		->with('stats', $stats)
     		->with('months', $months)
-    		->with('info', Info::orderBy($column, $type)->get())
+    		->with('info', $infos)
             ->with('claims_amount', $claims_amount)
             ->with('message', session('message'))
             ->with('type', $type)

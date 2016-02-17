@@ -21,6 +21,7 @@ class AppServiceProvider extends ServiceProvider
         // Queries down to: 11 -> Optimizing stages array
         // Queries down to: 7 -> Optimizing claim_status array
         // Queries down to: 4 -> Optimizing claimsAmount(Info) function
+        // Queries down to: 3! -> Reusing $infos Collection
         \DB::listen(function($query){
             \Log::info('Q: ' . $query->sql);
         });
