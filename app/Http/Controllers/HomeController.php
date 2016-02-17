@@ -23,13 +23,17 @@ class HomeController extends Controller
 
     public function index(Info $i, $column = 'id', $type = null) {
 
-        $info = Info::all();
+        $infos = Info::all();
 
-    	$total = $info->count();
-    	$chart_inc = [];
-    	$chart_inc['dm'] = Info::where('dm', '=', '')->get()->count();
-    	$chart_inc['policy'] = Info::where('policy', '=', '')->get()->count();
-    	$chart_inc['documents'] = Info::where('documents', '=', 'incomplete')->get()->count();
+    	$total = $infos->count();
+
+        $chart_inc = array_fill_keys(array('dm', 'policy', 'documents'), 0);
+
+        foreach($infos as $info){
+            if($info->dm == '') $chart_inc['dm'] += 1;
+            if($info->policy == '') $chart_inc['policy'] += 1;
+            if($info->documents == 'incomplete') $chart_inc['documents'] += 1;
+        }
 
     	$chart_complete = [];
     	$chart_complete['dm'] = $total - $chart_inc['dm'];
@@ -56,7 +60,7 @@ class HomeController extends Controller
             0
         );
 
-        foreach($info as $m){
+        foreach($infos as $m){
             if($m->encoded->month == '1') $months['jan'] += 1;
             if($m->encoded->month == '2') $months['feb'] += 1;
             if($m->encoded->month == '3') $months['mar'] += 1;
