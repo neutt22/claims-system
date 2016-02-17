@@ -123,12 +123,22 @@ class HomeController extends Controller
         $info->documents_comments = $this->request->input('docs_comments');
         $info->encoded = \Carbon\Carbon::now();
         $info->amount = $this->request->input('amount');
-        $info->stage = 1;
         $info->claim_status = 'pending';
         $info->scanned = 'no';
         $info->transmitted = 'no';
         $info->followed_up = 'no';
         $info->check_released = 'no';
+
+        // If the documents are complete, move to stage 2.
+        if($this->request->input('docs') == 'complete'){
+            $info->stage = 2;
+        }
+        // Else, stay in the stage 1.
+        else{
+            $info->stage = 1;
+        }
+
+        // Deadline for Mich and Client is 15 days
         $info->dead_line = $info->getDeadLine();
 
         if( $info->save() ) {
