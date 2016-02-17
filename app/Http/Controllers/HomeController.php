@@ -85,7 +85,7 @@ class HomeController extends Controller
             if($m->encoded->month == '12') $months['dec'] += 1;
         }
 
-        $claims_amount = $i->claimsAmount();
+        $claims_amount = $i->claimsAmount($infos);
 
         $column = $i->getColumn($column);
         $type = $i->getType($type);

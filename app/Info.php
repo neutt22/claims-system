@@ -3,6 +3,7 @@
 namespace App;
 
 use Carbon\Carbon;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
@@ -36,30 +37,23 @@ class Info extends Model
         return '&#x25BC;';
     }
 
-    public function claimsAmount() {
+    public function claimsAmount(Collection $infos) {
         $claims_amount = [];
         $total = 0;
         $pending = 0;
         $approved = 0;
 
-        // Fetch amounts
-        $totalO = Info::all(['amount']);
-        $pending0 = Info::where('claim_status', '=', 'pending')->get(['amount']);
-        $approved0 = Info::where('claim_status', '=', 'approved')->get(['amount']);
-
         // Calculate total claims
-        foreach($totalO as $t ) {
-            $total += $t->amount;
-        }
+        foreach($infos as $info ) {
+            $total += $info->amount;
 
-        // Calculate total pending claims
-        foreach($pending0 as $p) {
-            $pending += $p->amount;
-        }
+            if($info->claim_status == 'pending'){
+                $pending += $info->amount;
+            }
 
-        // Calculate total approved claims
-        foreach($approved0 as $a) {
-            $approved += $a->amount;
+            if($info->claim_status == 'approved'){
+                $approved += $info->amount;
+            }
         }
 
         $claims_amount['pending'] = $pending;
