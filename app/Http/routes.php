@@ -4,8 +4,6 @@ Route::group(['middleware' => ['web']], function () {
 
 	Route::auth();
 
-	Route::get('/test', 'HomeController@getDeadLine');
-
 	Route::get('/new', 'HomeController@new_record');
 	Route::get('/edit', 'HomeController@update_record');
 

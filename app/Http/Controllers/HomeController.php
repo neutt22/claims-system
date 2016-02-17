@@ -16,11 +16,6 @@ class HomeController extends Controller
         $this->middleware('auth');
     }
 
-    public function getDeadLine(Info $i)
-    {
-        return $i->getDeadLine();
-    }
-
     public function index(Info $i, $column = 'id', $type = null) {
 
         $column = $i->getColumn($column);
