@@ -53,11 +53,14 @@ class HomeController extends Controller
             if($info->stage == 4) $stages['stage_4'] += 1;
         }
 
-    	$stats = [];
-    	$stats['denied'] = Info::where('claim_status', '=', 'denied')->get()->count();
-    	$stats['approved'] = Info::where('claim_status', '=', 'approved')->get()->count();
-    	$stats['closed'] = Info::where('claim_status', '=', 'closed')->get()->count();
-    	$stats['pending'] = Info::where('claim_status', '=', 'pending')->get()->count();
+    	$stats = array_fill_keys(array('denied', 'approved', 'closed', 'pending'), 0);
+
+        foreach($infos as $info){
+            if($info->claim_status == 'denied') $stats['denied'] += 1;
+            if($info->claim_status == 'approved') $stats['approved'] += 1;
+            if($info->claim_status == 'closed') $stats['closed'] += 1;
+            if($info->claim_status == 'pending') $stats['pending'] += 1;
+        }
 
     	$months = array_fill_keys(
             array(
