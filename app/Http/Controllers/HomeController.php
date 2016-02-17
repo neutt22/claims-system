@@ -44,11 +44,14 @@ class HomeController extends Controller
     	$chart_complete['dm'] = $total - $chart_inc['dm'];
     	$chart_complete['policy'] = $total - $chart_inc['policy'];
 
-    	$stages = [];
-    	$stages['stage_1'] = Info::where('stage', '=', 1)->get()->count();
-    	$stages['stage_2'] = Info::where('stage', '=', 2)->get()->count();
-    	$stages['stage_3'] = Info::where('stage', '=', 3)->get()->count();
-    	$stages['stage_4'] = Info::where('stage', '=', 4)->get()->count();
+    	$stages = array_fill_keys(array('stage_1', 'stage_2', 'stage_3', 'stage_4'), 0);
+
+        foreach($infos as $info){
+            if($info->stage == 1) $stages['stage_1'] += 1;
+            if($info->stage == 2) $stages['stage_2'] += 1;
+            if($info->stage == 3) $stages['stage_3'] += 1;
+            if($info->stage == 4) $stages['stage_4'] += 1;
+        }
 
     	$stats = [];
     	$stats['denied'] = Info::where('claim_status', '=', 'denied')->get()->count();
