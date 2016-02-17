@@ -35,10 +35,14 @@ class HomeController extends Controller
             if($info->documents == 'incomplete') $chart_inc['documents'] += 1;
         }
 
-    	$chart_complete = [];
+    	$chart_complete = array_fill_keys(array('documents'), 0);
+
+        foreach($infos as $info){
+            if($info->documents == 'complete') $chart_complete['documents'] += 1;
+        }
+
     	$chart_complete['dm'] = $total - $chart_inc['dm'];
     	$chart_complete['policy'] = $total - $chart_inc['policy'];
-    	$chart_complete['documents'] = Info::where('documents', '=', 'complete')->get()->count();
 
     	$stages = [];
     	$stages['stage_1'] = Info::where('stage', '=', 1)->get()->count();
