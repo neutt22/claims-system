@@ -22,8 +22,10 @@ class HomeController extends Controller
     }
 
     public function index(Info $i, $column = 'id', $type = null) {
-    	
-    	$total = DB::table('infos')->count();
+
+        $info = Info::all();
+
+    	$total = $info->count();
     	$chart_inc = [];
     	$chart_inc['dm'] = Info::where('dm', '=', '')->get()->count();
     	$chart_inc['policy'] = Info::where('policy', '=', '')->get()->count();
@@ -54,9 +56,7 @@ class HomeController extends Controller
             0
         );
 
-        $_months = Info::whereMonth('encoded', '>=', '01')->whereMonth('encoded', '<=', '12')->get();
-
-        foreach($_months as $m){
+        foreach($info as $m){
             if($m->encoded->month == '1') $months['jan'] += 1;
             if($m->encoded->month == '2') $months['feb'] += 1;
             if($m->encoded->month == '3') $months['mar'] += 1;
