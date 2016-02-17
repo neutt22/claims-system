@@ -149,7 +149,7 @@
     <tbody>
     @if( count($info) > 0 )
       @foreach( $info as $data)
-        <tr>
+        <tr {{ $data->claim_status == 'approved' ? 'class=tr-claim-approved' : '' }}>
           <td>
             {{ $data->name }}
           </td>
@@ -182,7 +182,15 @@
               {{ $data->claim_status }}
             </span>
           </td>
-          <td class="td-action"><a href="/edit?id={{ $data->id }}" class="upd-button">Update</a></td>
+          @if( $data->claim_status == 'pending')
+          <td class="td-action">
+            <a href="/edit?id={{ $data->id }}" class="upd-button">Update</a>
+          </td>
+          @else
+          <td class="td-action">
+            ---
+          </td>
+          @endif
         </tr>
       @endforeach
     @endif
