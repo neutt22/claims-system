@@ -13,7 +13,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        // Current queries: 31
+        // Queries down to: 21
+        \DB::listen(function($query){
+            \Log::info('Q: ' . $query->sql);
+        });
     }
 
     /**

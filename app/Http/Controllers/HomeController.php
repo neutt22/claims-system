@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Info;
 use App\Http\Requests;
 use Illuminate\Http\Request;
+use DB;
 
 class HomeController extends Controller
 {
@@ -22,7 +23,7 @@ class HomeController extends Controller
 
     public function index(Info $i, $column = 'id', $type = null) {
     	
-    	$total = Info::all()->count();
+    	$total = DB::table('infos')->count();
     	$chart_inc = [];
     	$chart_inc['dm'] = Info::where('dm', '=', '')->get()->count();
     	$chart_inc['policy'] = Info::where('policy', '=', '')->get()->count();
@@ -45,19 +46,30 @@ class HomeController extends Controller
     	$stats['closed'] = Info::where('claim_status', '=', 'closed')->get()->count();
     	$stats['pending'] = Info::where('claim_status', '=', 'pending')->get()->count();
 
-    	$months = [];
-    	$months['jan'] = Info::whereMonth('encoded', '=', '01')->get()->count();
-    	$months['feb'] = Info::whereMonth('encoded', '=', '02')->get()->count();
-    	$months['mar'] = Info::whereMonth('encoded', '=', '03')->get()->count();
-    	$months['apr'] = Info::whereMonth('encoded', '=', '04')->get()->count();
-    	$months['may'] = Info::whereMonth('encoded', '=', '05')->get()->count();
-    	$months['jun'] = Info::whereMonth('encoded', '=', '06')->get()->count();
-    	$months['jul'] = Info::whereMonth('encoded', '=', '07')->get()->count();
-    	$months['aug'] = Info::whereMonth('encoded', '=', '08')->get()->count();
-    	$months['sep'] = Info::whereMonth('encoded', '=', '09')->get()->count();
-    	$months['oct'] = Info::whereMonth('encoded', '=', '10')->get()->count();
-    	$months['nov'] = Info::whereMonth('encoded', '=', '11')->get()->count();
-    	$months['dec'] = Info::whereMonth('encoded', '=', '12')->get()->count();
+    	$months = array_fill_keys(
+            array(
+                'jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul',
+                'aug', 'sep', 'oct', 'nov', 'dec',
+            ),
+            0
+        );
+
+        $_months = Info::whereMonth('encoded', '>=', '01')->whereMonth('encoded', '<=', '12')->get();
+
+        foreach($_months as $m){
+            if($m->encoded->month == '1') $months['jan'] += 1;
+            if($m->encoded->month == '2') $months['feb'] += 1;
+            if($m->encoded->month == '3') $months['mar'] += 1;
+            if($m->encoded->month == '4') $months['apr'] += 1;
+            if($m->encoded->month == '5') $months['may'] += 1;
+            if($m->encoded->month == '6') $months['jun'] += 1;
+            if($m->encoded->month == '7') $months['jul'] += 1;
+            if($m->encoded->month == '8') $months['aug'] += 1;
+            if($m->encoded->month == '9') $months['sep'] += 1;
+            if($m->encoded->month == '10') $months['oct'] += 1;
+            if($m->encoded->month == '11') $months['nov'] += 1;
+            if($m->encoded->month == '12') $months['dec'] += 1;
+        }
 
         $claims_amount = $i->claimsAmount();
 
