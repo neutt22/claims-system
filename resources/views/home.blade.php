@@ -120,7 +120,6 @@
       <span>Php</span><span class="count-approved"></span>
     </div>
   </div>
-
   @if( isset($message) )
     <p class="success">
       {!! $message !!}

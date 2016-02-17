@@ -15,6 +15,6 @@ Route::group(['middleware' => ['web']], function () {
 	Route::get('/', function(){
 		return redirect('/encoded/desc');
 	});
-	Route::get('/{column?}/{type?}', ['as' => 'home', 'uses' => 'HomeController@index']);
+	Route::get('/{column?}/{type?}', ['as' => 'home', 'uses' => 'HomeController@index'])->middleware('report-check');
 });
 
