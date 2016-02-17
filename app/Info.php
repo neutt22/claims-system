@@ -17,7 +17,7 @@ class Info extends Model
         if( \Schema::hasColumn('infos', $column)){
             return $column;
         }
-        return 'column';
+        return 'encoded';
     }
 
     public function getType($type)
