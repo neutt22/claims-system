@@ -219,4 +219,14 @@ class Info extends Model
 
         return $c;
     }
+
+    public function isDeadLineToday(Carbon $deadline)
+    {
+        $today = Carbon::now('Asia/Manila');
+        if($deadline->diffInDays($today) == 0){
+            return true;
+        }else{
+            return false;
+        }
+    }
 }

@@ -85,6 +85,11 @@ class HomeController extends Controller
 
         $claims_amount = $i->claimsAmount($infos);
 
+        foreach($infos as $info){
+            $deadline = $i->isDeadLineToday($info->dead_line);
+            $info['deadline_today'] = $deadline;
+        }
+
     	return view('home')
     		->with('chart_inc', $chart_inc)
     		->with('chart_complete', $chart_complete)

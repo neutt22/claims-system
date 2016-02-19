@@ -149,7 +149,13 @@
     <tbody>
     @if( count($info) > 0 )
       @foreach( $info as $data)
-        <tr {{ $data->claim_status == 'approved' ? 'class=tr-claim-approved' : '' }}>
+        @if($data->claim_status == 'approved')
+          <tr class="tr-claim-approved">
+        @elseif($data->deadline_today)
+          <tr class="tr-claim-error">
+        @else
+          <tr>
+        @endif
           <td>
             {{ $data->name }}
           </td>
