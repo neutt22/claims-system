@@ -4,6 +4,8 @@ Route::group(['middleware' => ['web']], function () {
 
 	Route::auth();
 
+	Route::get('qr', 'ReportController@getQuickReport');
+
 	Route::get('/new', 'HomeController@new_record');
 	Route::get('/edit', 'HomeController@update_record');
 

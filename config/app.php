@@ -157,6 +157,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         'Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider',
+        'Maatwebsite\Excel\ExcelServiceProvider',
 
     ],
 
@@ -204,6 +205,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
 
+        'Excel'      => 'Maatwebsite\Excel\Facades\Excel',
     ],
 
 ];

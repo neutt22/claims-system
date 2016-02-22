@@ -127,7 +127,7 @@
     @endif
 
     <div>
-      <button class="button hint--right qeb" data-hint="Quick export. Go to Profile > Reports for more options.">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
+      <button class="qr button hint--right qeb" data-hint="Quick export. Go to Profile > Reports for more options.">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
       @include('inc.sort_by')
     </div>
 
@@ -203,7 +203,7 @@
     </table>
 
     <div>
-      <button class="button hint--right qeb" data-hint="Quick export. Go to Profile > Reports for more options.">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
+      <button class="qr button hint--right qeb" data-hint="Quick export. Go to Profile > Reports for more options.">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
     </div>
 
   </div>
@@ -269,7 +269,9 @@
         }
       });
 
-
+      $('.qr').click(function(){
+        window.location.href = '/qr';
+      });
 
     });
   </script>

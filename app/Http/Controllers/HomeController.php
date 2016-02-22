@@ -126,7 +126,7 @@ class HomeController extends Controller
         $info->policy = $this->request->input('policy');
         $info->documents = $this->request->input('docs');
         $info->documents_comments = $this->request->input('docs_comments');
-        $info->encoded = \Carbon\Carbon::now();
+        $info->encoded = \Carbon\Carbon::now('Asia/Manila');
         $info->amount = $this->request->input('amount');
         $info->claim_status = 'pending';
         $info->scanned = 'no';
