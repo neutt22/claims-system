@@ -35,7 +35,7 @@ img#profile-pic {
 	display: block;
 	margin: 0 auto;
 	@include border-radius(50%);
-	border: 2px solid $theme_color;
+	//border: 2px solid $theme_color;sss
 	width: 40%;
 	a:active {
 		display: none;

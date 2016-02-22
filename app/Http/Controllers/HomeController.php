@@ -101,7 +101,8 @@ class HomeController extends Controller
             ->with('message', session('message'))
             ->with('type', $type)
             ->with('column', $column)
-            ->with('symbol', $i->getSymbol($type));
+            ->with('symbol', $i->getSymbol($type))
+            ->with('picture', \App\User::profilePicture());
     }
 
     public function new_record() {

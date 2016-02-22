@@ -35,7 +35,6 @@ img#profile-pic {
   -moz-border-radius: 50%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  border: 2px solid #0066cc;
   width: 40%;
 }
 /* line 40, ../sass/main.scss */

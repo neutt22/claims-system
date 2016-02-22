@@ -12,7 +12,7 @@
       <a href="/"><img class="logo" src="/img/logo.png" style="position: absolute; left: 5px; top: -15px;"></a>
       <div id="profile">
         <small style="font-size: 11px;">{{ \Auth::user()->level }}</small>
-        <a id="pa" href="#"><img id="profile-pic" src="{{ asset('img/profile_pic.jpg') }}"></a>
+        <a id="pa" href="#"><img id="profile-pic" src="{{ $picture }}"></a>
         <small style="font-size: 11px;">{{ \Auth::user()->email }}</small>
         <ul id="dropdown">
           <li><a class="hint--left" data-hint="Another claimant?! No problem." href="/new">New Record</a></li>
