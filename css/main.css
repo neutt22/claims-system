@@ -101,13 +101,13 @@ h3 {
 /* TABLE ===================================*/
 /* line 97, ../sass/main.scss */
 .tr-claim-error {
-  color: #DE5050;
+  color: #8d4040;
   background: #E9B6B6;
 }
 
 /* line 102, ../sass/main.scss */
 .tr-claim-approved {
-  color: #36BF30;
+  color: #235420;
   background: #83ED84;
 }
 
