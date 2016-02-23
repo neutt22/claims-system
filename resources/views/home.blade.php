@@ -29,19 +29,11 @@
       <h4>Claimant Deadline Today: {{ \Carbon\Carbon::now('Asia/Manila')->format('M. d, Y') }}</h4>
       <hr>
       <div>
-        <span class="claimant-notif"><a href="#">Foo Bar</a></span>
-        <span class="claimant-notif"><a href="#">Angelo B. Crisostomo</a></span>
-        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
-        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
-        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
-        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
-        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
-        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
-        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
-        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
-        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
-        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
-        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+        @if( count($deadline_names) > 0)
+          @foreach( $deadline_names as $deadline_name)
+            <span class="claimant-notif"><a href="/edit?id={{ $deadline_name->id }}">{{ $deadline_name->name }}</a></span>
+          @endforeach
+        @endif
       </div>
     </div>
 

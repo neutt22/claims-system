@@ -85,9 +85,14 @@ class HomeController extends Controller
 
         $claims_amount = $i->claimsAmount($infos);
 
+        $deadline_names = [];
+
         foreach($infos as $info){
             $deadline = $i->isDeadLineToday($info->dead_line);
             $info['deadline_today'] = $deadline;
+            if($deadline == 'deadline'){
+                $deadline_names[$info->name] = $info;
+            }
         }
 
     	return view('home')
@@ -102,7 +107,8 @@ class HomeController extends Controller
             ->with('type', $type)
             ->with('column', $column)
             ->with('symbol', $i->getSymbol($type))
-            ->with('picture', \App\User::profilePicture());
+            ->with('picture', \App\User::profilePicture())
+            ->with('deadline_names', $deadline_names);
     }
 
     public function new_record() {
