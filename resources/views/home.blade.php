@@ -155,6 +155,7 @@
       <th>Stage {{ $column == 'stage' ? $symbol : '' }}</th>
       <th>Deadline {{ $column == 'dead_line' ? $symbol : '' }}</th>
       <th>Status {{ $column == 'status' ? $symbol : '' }}</th>
+      <th>Tag {{ $column == 'company' ? $symbol : '' }}</th>
       <th>Update</th>
       </thead>
       <tbody>
@@ -195,9 +196,12 @@
                 {{ $data->dead_line->format('m/d/Y h:i A') }}
               </td>
               <td>
-            <span>
-              {{ $data->claim_status }}
-            </span>
+                <span>
+                  {{ $data->claim_status }}
+                </span>
+              </td>
+              <td>
+                {{ $data->tag }}
               </td>
               @if( $data->claim_status == 'pending')
                 <td class="td-action">

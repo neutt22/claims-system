@@ -116,7 +116,7 @@ h3 {
 	div span {
 		background: rgba(255, 0, 0, 0.26);
 		border: 1px solid rgba(255, 0, 0, 0.26);
-		@include border-radius(5px);
+		@include border-radius(3px);
 		padding: 2px;
 		margin: 2px;
 		float: left;

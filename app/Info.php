@@ -74,6 +74,7 @@ class Info extends Model
         $info->policy = $request->input('policy');
         $info->documents = $request->input('docs');
         $info->documents_comments = $request->input('docs_comments');
+        $info->tag = $request->input('tag');
         $info->amount = $request->input('amount');
 
         $message = 'Record has been updated.';
