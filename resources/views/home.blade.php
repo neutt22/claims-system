@@ -25,6 +25,26 @@
       <h3>Claims System v.0.4</h3>
     </div>
 
+    <div class="deadline-notif-container">
+      <h4>Claimant Deadline Today: {{ \Carbon\Carbon::now('Asia/Manila')->format('M. d, Y') }}</h4>
+      <hr>
+      <div>
+        <span class="claimant-notif"><a href="#">Foo Bar</a></span>
+        <span class="claimant-notif"><a href="#">Angelo B. Crisostomo</a></span>
+        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+        <span class="claimant-notif"><a href="#">Angelina BC. Cruz</a></span>
+      </div>
+    </div>
+
     <div style="text-align: center;">
       <div id="chart_dm" style="display: inline-block;"></div>
       <div id="chart_policy" style="display: inline-block;"></div>
