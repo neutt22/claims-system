@@ -209,8 +209,7 @@
                 </td>
               @else
                 <td class="td-action">
-                  ---
-                  {{-- TODO: Add 'view' action so they could see the full details. --}}
+                  <a href="/edit?id={{ $data->id }}" class="upd-button">View</a>
                 </td>
               @endif
             </tr>
