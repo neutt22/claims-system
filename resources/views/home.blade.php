@@ -210,6 +210,7 @@
               @else
                 <td class="td-action">
                   ---
+                  {{-- TODO: Add 'view' action so they could see the full details. --}}
                 </td>
               @endif
             </tr>
