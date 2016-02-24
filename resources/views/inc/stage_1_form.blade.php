@@ -26,7 +26,12 @@
 
 			<span>Encoded: <small>{{ \Carbon\Carbon::parse($info->encoded)->format('m/d/Y h:i A') }} </small></span>
 
-			<input type="text" name="tag" placeholder="enter tag or company name" />
+			<input type="text" name="nature_of_claim" placeholder="nature of claim" value="{{ $info->nature_of_claim }}"/>
+			<input type="text" name="type_of_sickness" placeholder="type of sickness" value="{{ $info->type_of_sickness }}"/>
+			<input type="text" name="hospital" placeholder="hospital" value="{{ $info->hospital }}"/>
+			<input type="text" name="contact" placeholder="contact no." value="{{ $info->contact }}"/>
+			<input type="text" name="area" placeholder="area" value="{{ $info->area }}"/>
+			<input type="text" name="tag" placeholder="enter tag or company name" value="{{ $info->tag }}"/>
 			<input type="text" name="amount" placeholder="enter claim amount"  value="{{ $info->amount }}"/>
 			<span><small>*please double check fields before submitting</small></span><br/>
 			<input type="hidden" name="id" value="{{ $info->id }}">

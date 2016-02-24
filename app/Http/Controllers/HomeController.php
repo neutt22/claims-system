@@ -146,6 +146,11 @@ class HomeController extends Controller
         $info->documents = $this->request->input('docs');
         $info->documents_comments = $this->request->input('docs_comments');
         $info->encoded = \Carbon\Carbon::now('Asia/Manila');
+        $info->nature_of_claim = $this->request->input('nature_of_claim');
+        $info->type_of_sickness = $this->request->input('type_of_sickness');
+        $info->hospital = $this->request->input('hospital');
+        $info->contact = $this->request->input('contact');
+        $info->area = $this->request->input('area');
         $info->tag = $this->request->input('tag');
         $info->amount = $this->request->input('amount');
         $info->claim_status = 'pending';

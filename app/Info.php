@@ -109,6 +109,11 @@ class Info extends Model
         $info->policy = $request->input('policy');
         $info->documents = $request->input('docs');
         $info->documents_comments = $request->input('docs_comments');
+        $info->nature_of_claim = $request->input('nature_of_claim');
+        $info->type_of_sickness = $request->input('type_of_sickness');
+        $info->hospital = $request->input('hospital');
+        $info->contact = $request->input('contact');
+        $info->area = $request->input('area');
         $info->tag = $request->input('tag');
         $info->amount = $request->input('amount');
 
