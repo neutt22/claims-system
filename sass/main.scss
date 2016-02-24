@@ -340,7 +340,7 @@ form#stage-1 > a {
 	}
 }
 
-/* UPDATE CONTAINER LEFT ===================================*/
+/* UPDATE CONTAINER ===================================*/
 
 .update-container {
 	float: left;
@@ -355,6 +355,41 @@ form#stage-1 > a {
 		margin-bottom: 0;
 		color: darkgrey;
 	}
+}
+
+/* REPORT CONTAINER ===================================*/
+
+.report-container {
+	width: 1100px;
+	margin: 0 auto;
+	padding: 3em;
+	.report-head {
+		border-left: 3px solid $theme_color;
+		padding-left: 5px;
+		background-image: url('/img/hash.png');
+		background-repeat: no-repeat;
+		background-size: 30px;
+		background-position: right top;
+		width: 261px;
+		height: 30px;
+		margin-bottom: 10px;
+	}
+	.report-item h2 {
+		color: darkgrey;
+		margin-bottom: 3px;
+		font-family: Arial;
+		display: inline-block;
+	}
+	span {
+		font-size: 18px;
+		color: whitesmoke;
+		padding: 5px;
+		background: rgba(255, 0, 0, 0.67);
+	}
+}
+
+.good {
+	background: rgba(0, 128, 0, 0.76) !important;
 }
 
 /* LOGIN FORM ===================================*/
