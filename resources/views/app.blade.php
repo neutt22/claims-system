@@ -12,6 +12,10 @@
 <body>
 	@yield('content')
 
+	<footer>
+		@yield('footer')
+	</footer>
+
 	@yield('custom-js')
 </body>
 </html>

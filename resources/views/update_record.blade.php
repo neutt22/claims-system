@@ -51,6 +51,10 @@
 
 @stop
 
+@section('footer')
+	@include('inc.footer')
+@endsection
+
 @section('custom-js')
 	<script src="{{ asset('js/moment.js')}}"></script>
 	<script src="{{ asset('js/pickaday.js')}}"></script>

@@ -13,3 +13,7 @@
 		</form>
 	</div>
 @stop
+
+@section('footer')
+	@include('inc.footer')
+@endsection
