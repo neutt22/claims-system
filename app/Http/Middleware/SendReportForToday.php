@@ -33,7 +33,7 @@ class SendReportForToday
             foreach(\App\Info::all() as $info){
                 $deadline = $i->isDeadLineToday($info->dead_line);
 
-                if($deadline == 'deadline'){
+                if($deadline == 'deadline' && $info->claim_status != 'approved'){
                     $deadline_names[$info->name] = $info;
                 }
             }
