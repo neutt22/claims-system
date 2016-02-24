@@ -100,7 +100,7 @@ class HomeController extends Controller
         foreach($infos as $info){
             $deadline = $i->isDeadLineToday($info->dead_line);
             $info['deadline_today'] = $deadline;
-            if($deadline == 'deadline'){
+            if($deadline == 'deadline' && $info->claim_status != 'approved'){
                 $deadline_names[$info->name] = $info;
             }
         }
