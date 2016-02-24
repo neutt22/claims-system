@@ -21,7 +21,12 @@ class HomeController extends Controller
         $column = $i->getColumn($column);
         $type = $i->getType($type);
 
-        $infos = Info::orderBy($column, $type)->get();
+        $q = $this->request->input('q');
+        if($q){
+            $infos = Info::where('claimant', 'like', '%' . $q . '%')->orderBy($column, $type)->get();
+        }else{
+            $infos = Info::orderBy($column, $type)->get();
+        }
 
     	$total = $infos->count();
 

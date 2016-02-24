@@ -49,8 +49,10 @@
     <div class="search-wrapper hint--top-right" data-hint="Search here. Click the advanced settings for more search options.">
       <label>Search: </label>
       <div class="search-box">
-        <input type="text" name="q" placeholder="claimant...">
-        <img src="{{ asset('img/search.png') }}">
+        <form action="/encoded/desc" method="GET">
+          <input type="text" name="q" placeholder="claimant...">
+          <img src="{{ asset('img/search.png') }}">
+        </form>
       </div>
       <div>
         <button id="adv-btn">advanced</button>
