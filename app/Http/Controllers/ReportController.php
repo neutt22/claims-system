@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 class ReportController extends Controller
 {
 
+    public function getReport()
+    {
+        return view('reports');
+    }
+
     public function getQuickReport(){
 
         $date = \Carbon\Carbon::today('Asia/Manila');

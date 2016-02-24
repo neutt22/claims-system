@@ -14,6 +14,8 @@ Route::group(['middleware' => ['web']], function () {
 	Route::post('/new', 'HomeController@post_new_record');
 	Route::post('/edit', 'HomeController@post_update_record');
 
+	Route::get('/reports', 'ReportController@getReport');
+
 	Route::get('/logout', 'HomeController@getLogout');
 
 	Route::get('/', function(){

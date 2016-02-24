@@ -17,7 +17,7 @@
         <ul id="dropdown">
           <li><a class="hint--left" data-hint="Another claimant?! No problem." href="/new">New Record</a></li>
           <li><a class="hint--left" data-hint="So your boss are asking for reports?" href="/reports">Reports</a></li>
-          <li><a class="hint--left" data-hint="Settings for my lovely app!" href="#">Settings</a></li>r
+          <li><a class="hint--left" data-hint="Settings for my lovely app!" href="#">Settings</a></li>
           <li><hr style="margin: 0; border-top: 1px solid #d9d9d9; margin: 0 5px;"></li>
           <li><a class="hint--left" data-hint="I hate to see you go." href="/logout">Log Out</a></li>
         </ul>
