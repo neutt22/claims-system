@@ -22,13 +22,18 @@ class HomeController extends Controller
         $type = $i->getType($type);
 
         $q = $this->request->input('q');
-        if($q){
+        $adv = $this->request->input('adv');
+
+        if($q) {
             $infos = Info::where('claimant', 'like', '%' . $q . '%')->orderBy($column, $type)->get();
+        }
+        else if($adv){
+            $infos = $i->getAdvancedSearchModel($this->request);
         }else{
             $infos = Info::orderBy($column, $type)->get();
         }
 
-    	$total = $infos->count();
+    	$total = count($infos);
 
         $chart_inc = array_fill_keys(array('dm', 'policy', 'documents'), 0);
 
@@ -114,7 +119,8 @@ class HomeController extends Controller
             ->with('symbol', $i->getSymbol($type))
             ->with('picture', \App\User::profilePicture())
             ->with('deadline_names', $deadline_names)
-            ->with('q', $q);
+            ->with('q', $q)
+            ->with('adv', $adv);
     }
 
     public function new_record() {

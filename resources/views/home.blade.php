@@ -28,7 +28,7 @@
     @if( count($deadline_names) > 0)
       <div class="deadline-notif-container">
         <div class="counter">
-          <span class="title">Deadline Notification</span> <span class="deadline-badge"> {{ count($deadline_names) }}</span>
+          <span class="title">Deadline Notification</span> <span class="deadline-badge"> {!! sprintf('%02d', count($deadline_names)) !!}</span>
         </div>
         <hr>
         <div>
@@ -61,61 +61,63 @@
         <div class="assm">
           <h2>Advanced Search Options</h2>
           <hr>
-          <form action="" method="get">
+          <form action="/encoded/desc" method="GET">
             <div class="adv-element">
               <div class="adv-1st-col">
-                <label for="adv-principal"><input id="adv-principal" type="checkbox" name="adv-principal"> Has Principal: </label>
+                <label for="chk-principal"><input id="chk-principal" type="checkbox" name="chk-principal"> Has Principal: </label>
               </div>
               <div class="adv-2nd-col">
-                <input type="text" name="adv-principal" placeholder="principal name...">
+                <input type="text" name="txt-principal" placeholder="principal name...">
               </div>
             </div>
             <div class="adv-element">
               <div class="adv-1st-col">
-                <label for="adv-claimant"><input id="adv-claimant" type="checkbox" name="adv-claimant"> Has Claimant: </label>
+                <label for="chk-claimant"><input id="chk-claimant" type="checkbox" name="chk-claimant"> Has Claimant: </label>
               </div>
               <div class="adv-2nd-col">
-                <input type="text" name="adv-claimant" placeholder="claimant name...">
+                <input type="text" name="txt-claimant" placeholder="claimant name...">
               </div>
             </div>
             <div class="adv-element">
               <div class="adv-1st-col">
-                <label for="coc-check"><input id="coc-check" type="checkbox" name="coc-check"> Has COC: </label>
+                <label for="chk-coc"><input id="chk-coc" type="checkbox" name="chk-coc"> Has COC: </label>
               </div>
               <div class="adv-2nd-col">
-                <input type="text" name="coc-text" placeholder="coc number...">
+                <input type="text" name="txt-coc" placeholder="coc number...">
               </div>
             </div>
             <div class="adv-element">
               <div class="adv-1st-col">
-                <label for="dm-check"><input id="dm-check" type="checkbox" name="dm-check"> Has DM: </label>
+                <label for="chk-dm"><input id="chk-check" type="checkbox" name="chk-dm"> Has DM: </label>
               </div>
               <div class="adv-2nd-col">
-                <input type="text" name="dm-text" placeholder="dm number...">
+                <input type="text" name="txt-dm" placeholder="dm number...">
               </div>
             </div>
             <div class="adv-element">
               <div class="adv-1st-col">
-                <label for="policy-check"><input id="policy-check" type="checkbox" name="policy-check"> Has Policy: </label>
+                <label for="chk-policy"><input id="chk-policy" type="checkbox" name="chk-policy"> Has Policy: </label>
               </div>
               <div class="adv-2nd-col">
-                <input type="text" name="policy-text" placeholder="policy number...">
+                <input type="text" name="txt-policy" placeholder="policy number...">
               </div>
             </div>
             <div class="adv-element">
               <div class="adv-1st-col">
-                <label for="status-check"><input id="status-check" type="checkbox" name="status-check"> Has Status: </label>
+                <label for="chk-status"><input id="chk-status" type="checkbox" name="chk-status"> Has Status: </label>
               </div>
               <div class="adv-2nd-col">
-                <select name="status-select" id="status-select">
-                  <option value="">Pending</option>
-                  <option value="">Approved</option>
-                  <option value="">Closed</option>
-                  <option value="">Denied</option>
+                <select name="txt-status" id="status-select">
+                  <option value="pending">Pending</option>
+                  <option value="approved">Approved</option>
+                  <option value="closed">Closed</option>
+                  <option value="denied">Denied</option>
                 </select>
               </div>
             </div>
+
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="adv" value="advanced">
             <input type="submit" value="Search" class="button">
           </form>
         </div>
@@ -146,6 +148,11 @@
     @if( isset($q) )
       <h2 class="q-result">Showing {{ count($info) }} results for '{{ $q }}'</h2>
     @endif
+
+    @if( isset($adv) )
+      <h2 class="q-result">Showing {{ count($info) }} results for your advanced query</h2>
+    @endif
+
     <div>
       <button class="qr button hint--right qeb" data-hint="Quick export. Go to Profile > Reports for more options.">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
       @include('inc.sort_by')

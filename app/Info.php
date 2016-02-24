@@ -13,6 +13,41 @@ class Info extends Model
 
     protected $dates = ['encoded', 'inception', 'dead_line', 'f_deadline', 'l_deadline'];
 
+    public function getAdvancedSearchModel(Request $request)
+    {
+        $query = Info::class;
+
+        $query = $query::orderBy('encoded', 'desc');
+
+        if($request->input('chk-principal')){
+            $query = $query->where('name', 'like', '%' . $request->input('txt-principal') . '%');
+        }
+
+        if($request->input('chk-claimant')){
+            $query = $query->where('claimant', 'like', '%' . $request->input('txt-claimant') . '%');
+        }
+
+        if($request->input('chk-coc')){
+            $query->where('coc', 'like', '%' . $request->input('txt-coc') . '%');
+        }
+
+        if($request->input('chk-dm')){
+            $query->where('dm', 'like', '%' . $request->input('txt-dm') . '%');
+        }
+
+        if($request->input('chk-policy')){
+            $query->where('policy', 'like', '%' . $request->input('txt-policy') . '%');
+        }
+
+        if($request->input('chk-status')){
+            $query->where('claim_status', 'like', '%' . $request->input('txt-status') . '%');
+        }
+
+//        dd($query->get());
+
+        return $query->get();
+    }
+
     public function getColumn($column)
     {
         if( \Schema::hasColumn('infos', $column)){
