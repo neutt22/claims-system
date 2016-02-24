@@ -444,10 +444,15 @@ form#stage-1 > a {
 
 /* SEARCH BOX ===================================*/
 /* line 381, ../sass/main.scss */
+.q-result {
+  color: #3C3B3B;
+}
+
+/* line 385, ../sass/main.scss */
 .search-wrapper {
   width: 260px;
 }
-/* line 382, ../sass/main.scss */
+/* line 386, ../sass/main.scss */
 .search-wrapper > label {
   display: inline-block;
   vertical-align: middle;
@@ -456,19 +461,19 @@ form#stage-1 > a {
   *display: inline;
   width: 20%;
 }
-/* line 387, ../sass/main.scss */
+/* line 391, ../sass/main.scss */
 .search-wrapper div:nth-child(3) {
   position: relative;
   margin-top: 1px;
   text-align: right;
   font-size: 11px;
 }
-/* line 392, ../sass/main.scss */
+/* line 396, ../sass/main.scss */
 .search-wrapper div:nth-child(3) button {
   color: #404040;
   text-decoration: underline;
 }
-/* line 396, ../sass/main.scss */
+/* line 400, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm {
   display: none;
   position: absolute;
@@ -479,21 +484,21 @@ form#stage-1 > a {
   border: 1px solid #d9d9d9;
   background: rgba(242, 242, 242, 0.93);
 }
-/* line 405, ../sass/main.scss */
+/* line 409, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm hr {
   color: #404040;
   border-top: 1px solid silver;
 }
-/* line 409, ../sass/main.scss */
+/* line 413, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm form .button {
   float: right;
 }
-/* line 412, ../sass/main.scss */
+/* line 416, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm .adv-element {
   width: 100%;
   margin: 15px 0;
 }
-/* line 415, ../sass/main.scss */
+/* line 419, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm .adv-element .adv-1st-col {
   display: inline-block;
   vertical-align: middle;
@@ -503,7 +508,7 @@ form#stage-1 > a {
   width: 35%;
   text-align: left;
 }
-/* line 420, ../sass/main.scss */
+/* line 424, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm .adv-element .adv-2nd-col {
   background: yellow;
   display: inline-block;
@@ -514,16 +519,16 @@ form#stage-1 > a {
   width: 64%;
   text-align: right;
 }
-/* line 425, ../sass/main.scss */
+/* line 429, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm .adv-element .adv-2nd-col input, .search-wrapper div:nth-child(3) .assm .adv-element .adv-2nd-col select {
   width: 100%;
 }
-/* line 430, ../sass/main.scss */
+/* line 434, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm h2, .search-wrapper div:nth-child(3) .assm h3, .search-wrapper div:nth-child(3) .assm h4 {
   margin: 0 0 15px 0;
   color: #404040;
 }
-/* line 436, ../sass/main.scss */
+/* line 440, ../sass/main.scss */
 .search-wrapper .search-box {
   display: inline-block;
   vertical-align: middle;
@@ -537,12 +542,12 @@ form#stage-1 > a {
   position: relative;
   right: -9px;
 }
-/* line 444, ../sass/main.scss */
+/* line 448, ../sass/main.scss */
 .search-wrapper .search-box input {
   outline: none;
   border: 0px;
 }
-/* line 448, ../sass/main.scss */
+/* line 452, ../sass/main.scss */
 .search-wrapper .search-box img {
   position: absolute;
   width: 20px;
@@ -551,13 +556,13 @@ form#stage-1 > a {
 }
 
 /* QUICK EXPORT BUTTON ===================================*/
-/* line 459, ../sass/main.scss */
+/* line 463, ../sass/main.scss */
 .qeb {
   font-size: 11px;
 }
 
 /* TEXT STATUS ===================================*/
-/* line 465, ../sass/main.scss */
+/* line 469, ../sass/main.scss */
 .claims-stat {
   display: inline-block;
   vertical-align: middle;
@@ -570,22 +575,22 @@ form#stage-1 > a {
   width: 80%;
   text-align: center;
 }
-/* line 472, ../sass/main.scss */
+/* line 476, ../sass/main.scss */
 .claims-stat .total-claims-pending, .claims-stat .total-claims, .claims-stat .total-claims-approved {
   display: inline-block;
   margin: auto 30px;
 }
-/* line 475, ../sass/main.scss */
+/* line 479, ../sass/main.scss */
 .claims-stat .total-claims-pending h4, .claims-stat .total-claims h4, .claims-stat .total-claims-approved h4 {
   margin-top: 0;
 }
-/* line 478, ../sass/main.scss */
+/* line 482, ../sass/main.scss */
 .claims-stat .total-claims-pending span, .claims-stat .total-claims span, .claims-stat .total-claims-approved span {
   font-size: 2em;
 }
 
 /* SORT BY ===================================*/
-/* line 486, ../sass/main.scss */
+/* line 490, ../sass/main.scss */
 .sort-by {
   float: right;
   text-align: center;
@@ -594,11 +599,11 @@ form#stage-1 > a {
   list-style: none;
   font-size: 13px;
 }
-/* line 493, ../sass/main.scss */
+/* line 497, ../sass/main.scss */
 .sort-by li:hover .sort-by-menu {
   display: block;
 }
-/* line 496, ../sass/main.scss */
+/* line 500, ../sass/main.scss */
 .sort-by li span {
   display: inline-block;
   vertical-align: middle;
@@ -607,7 +612,7 @@ form#stage-1 > a {
   *display: inline;
   color: blue;
 }
-/* line 500, ../sass/main.scss */
+/* line 504, ../sass/main.scss */
 .sort-by .sort-by-menu {
   position: absolute;
   display: none;
@@ -615,7 +620,7 @@ form#stage-1 > a {
   padding: 0;
   border: 1px solid #d9d9d9;
 }
-/* line 506, ../sass/main.scss */
+/* line 510, ../sass/main.scss */
 .sort-by .sort-by-menu li a, .sort-by .sort-by-menu li label {
   display: block;
   text-decoration: none;
@@ -624,7 +629,7 @@ form#stage-1 > a {
   padding: 4px 10px;
   border-bottom: 1px solid #d9d9d9;
 }
-/* line 514, ../sass/main.scss */
+/* line 518, ../sass/main.scss */
 .sort-by .sort-by-menu li a:hover, .sort-by .sort-by-menu li label:hover {
   color: #d9d9d9;
   background: #404040;

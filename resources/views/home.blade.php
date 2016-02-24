@@ -136,12 +136,16 @@
         <span>Php</span><span class="count-approved"></span>
       </div>
     </div>
+
     @if( isset($message) )
       <p class="success">
         {!! $message !!}
       </p>
     @endif
 
+    @if( isset($q) )
+      <h2 class="q-result">Showing results for '{{ $q }}'</h2>
+    @endif
     <div>
       <button class="qr button hint--right qeb" data-hint="Quick export. Go to Profile > Reports for more options.">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
       @include('inc.sort_by')

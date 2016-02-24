@@ -113,7 +113,8 @@ class HomeController extends Controller
             ->with('column', $column)
             ->with('symbol', $i->getSymbol($type))
             ->with('picture', \App\User::profilePicture())
-            ->with('deadline_names', $deadline_names);
+            ->with('deadline_names', $deadline_names)
+            ->with('q', $q);
     }
 
     public function new_record() {

@@ -378,6 +378,10 @@ form#stage-1 > a {
 
 /* SEARCH BOX ===================================*/
 
+.q-result {
+	color: #3C3B3B;
+}
+
 .search-wrapper {
 	> label {
 		@include inline-block;
