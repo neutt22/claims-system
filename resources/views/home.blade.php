@@ -238,7 +238,7 @@
         $('.assm').toggle();
       });
 
-      $('input:checkbox').change(function(){
+      $('#sort:checkbox').change(function(){
         if( $(this).is(':checked')){
           $(window).attr('location', '/{{ $column }}/asc');
         }else{

@@ -11,7 +11,7 @@
             <li><a href="/amount/{{ $type }}">Amount</a></li>
             <li><a href="/stage/{{ $type }}">Stage</a></li>
             <li><a href="/claim_status/{{ $type }}">Status</a></li>
-            <li><label for="type"><input id="type" type="checkbox" {{ $type == 'asc' ? 'checked' : '' }}> asc</label></li>
+            <li><label for="sort"><input id="sort" type="checkbox" {{ $type == 'asc' ? 'checked' : '' }}> asc</label></li>
         </ul>
     </li>
 </ul>
