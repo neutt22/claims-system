@@ -98,6 +98,27 @@ h3 {
 	background: rgba(255, 0, 0, 0.26);
 	border: 1px solid rgba(255, 0, 0, 0.63);
 	padding: 5px;
+	.counter {
+		.title {
+			font-size: 20px;
+			font-weight: bold;
+			background: none;
+			border: none;
+			line-height: 28px;
+			margin: 0;
+		}
+		.deadline-badge {
+			font-size: 15px;
+			color: floralwhite;
+			background: rgba(190, 0, 0, 0.74);
+			@include border-radius(50%);
+			padding: 5px;
+		}
+	}
+	h2 {
+		color: rgba(255, 0, 0, 0.58);
+		margin: 3px 0;
+	}
 	h4 {
 		font-weight: normal;
 		font-family: Arial, 'Lato';

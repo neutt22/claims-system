@@ -27,11 +27,13 @@
 
     @if( count($deadline_names) > 0)
       <div class="deadline-notif-container">
-        <h4>Claimant Deadline Today: {{ \Carbon\Carbon::now('Asia/Manila')->format('M. d, Y') }}</h4>
+        <div class="counter">
+          <span class="title">Deadline Notification</span> <span class="deadline-badge"> {{ count($deadline_names) }}</span>
+        </div>
         <hr>
         <div>
             @foreach( $deadline_names as $deadline_name)
-              <span class="claimant-notif"><a href="/edit?id={{ $deadline_name->id }}">{{ $deadline_name->name }}</a></span>
+              <span class="claimant-notif"><a href="/edit?id={{ $deadline_name->id }}">{{ $deadline_name->claimant }}</a></span>
             @endforeach
         </div>
       </div>
