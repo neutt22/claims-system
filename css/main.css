@@ -634,3 +634,14 @@ form#stage-1 > a {
   color: #d9d9d9;
   background: #404040;
 }
+
+/* FOOTER ===================================*/
+/* line 528, ../sass/main.scss */
+footer {
+  background: #333333;
+  color: whitesmoke;
+  font-size: 12px;
+  text-align: center;
+  padding: 8px;
+  margin-top: 10px;
+}
