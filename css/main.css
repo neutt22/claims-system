@@ -446,6 +446,7 @@ form#stage-1 > a {
 }
 /* line 375, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm {
+  display: none;
   position: absolute;
   width: 350px;
   z-index: 2;

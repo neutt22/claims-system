@@ -25,17 +25,17 @@
       <h3>Claims System v.0.4</h3>
     </div>
 
-    <div class="deadline-notif-container">
-      <h4>Claimant Deadline Today: {{ \Carbon\Carbon::now('Asia/Manila')->format('M. d, Y') }}</h4>
-      <hr>
-      <div>
-        @if( count($deadline_names) > 0)
-          @foreach( $deadline_names as $deadline_name)
-            <span class="claimant-notif"><a href="/edit?id={{ $deadline_name->id }}">{{ $deadline_name->name }}</a></span>
-          @endforeach
-        @endif
+    @if( count($deadline_names) > 0)
+      <div class="deadline-notif-container">
+        <h4>Claimant Deadline Today: {{ \Carbon\Carbon::now('Asia/Manila')->format('M. d, Y') }}</h4>
+        <hr>
+        <div>
+            @foreach( $deadline_names as $deadline_name)
+              <span class="claimant-notif"><a href="/edit?id={{ $deadline_name->id }}">{{ $deadline_name->name }}</a></span>
+            @endforeach
+        </div>
       </div>
-    </div>
+    @endif
 
     <div style="text-align: center;">
       <div id="chart_dm" style="display: inline-block;"></div>
