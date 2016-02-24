@@ -144,7 +144,7 @@
     @endif
 
     @if( isset($q) )
-      <h2 class="q-result">Showing results for '{{ $q }}'</h2>
+      <h2 class="q-result">Showing {{ count($info) }} results for '{{ $q }}'</h2>
     @endif
     <div>
       <button class="qr button hint--right qeb" data-hint="Quick export. Go to Profile > Reports for more options.">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
