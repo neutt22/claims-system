@@ -635,8 +635,15 @@ form#stage-1 > a {
   background: #404040;
 }
 
-/* FOOTER ===================================*/
+/* TOTAL ===================================*/
 /* line 528, ../sass/main.scss */
+.total-row {
+  text-align: right;
+  font-size: 14px;
+}
+
+/* FOOTER ===================================*/
+/* line 535, ../sass/main.scss */
 footer {
   background: #333333;
   color: whitesmoke;

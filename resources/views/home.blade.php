@@ -233,6 +233,10 @@
       </tbody>
     </table>
 
+    <div class="total-row">
+      <span>Total: {{ count($info) }}</span>
+    </div>
+
     <div>
       <button class="qr button hint--right qeb" data-hint="Quick export. Go to Profile > Reports for more options.">quick export <img src="{{ asset('img/download.png') }}" style="width: 10px;"></button>
     </div>
