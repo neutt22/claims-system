@@ -11,7 +11,7 @@ class Info extends Model
 {
     protected $fillable = array('name', 'claimant', 'coc');
 
-    protected $dates = ['encoded', 'inception', 'dead_line'];
+    protected $dates = ['encoded', 'inception', 'dead_line', 'f_deadline', 'l_deadline'];
 
     public function getColumn($column)
     {
@@ -63,7 +63,7 @@ class Info extends Model
         return $claims_amount;
     }
 
-    public function processStage1(Request $request) {
+    public function processStage1(Info $i, Request $request) {
 
         $info = Info::find($request->input('id'));
         $info->name = $request->input('name');
@@ -78,8 +78,13 @@ class Info extends Model
 
         $message = 'Record has been updated.';
 
+        // Move to stage 2
+        // Add deadline of 3 days for stage 2
+        // Mark the fist deadline to now/today to recognize 15 working days
         if($request->input('docs') == 'complete' && $info->stage == 1){
             $info->stage = 2;
+            $info->dead_line = $i->getDeadLine(3);
+            $info->f_deadline = \Carbon\Carbon::now('Asia/Manila');
             $message = "Record has been updated. Congrats! The claimant is on <strong>stage 2</strong>.";
         }
 
@@ -90,7 +95,7 @@ class Info extends Model
         }
     }
 
-    public function processStage2(Request $request) {
+    public function processStage2(Info $i, Request $request) {
 
     	$info = Info::find($request->input('id'));
 
@@ -102,8 +107,11 @@ class Info extends Model
 
         $message = 'Record has been updated.';
 
+        // Move to stage 3
+        // Add deadline of 9 days for stage 3
         if($scanned == 'yes' && $transmitted == 'yes' && $info->stage == 2) {
             $info->stage = 3;
+            $info->dead_line = $i->getDeadLine(9);
             $message = "Record has been updated. Congrats! The claimant is on <strong>stage 3</strong>.";
         }
 
@@ -114,7 +122,7 @@ class Info extends Model
         }
     }
 
-    public function processStage3(Request $request) {
+    public function processStage3(Info $i, Request $request) {
 
     	$info = Info::find($request->input('id'));
 
@@ -126,8 +134,11 @@ class Info extends Model
 
         $message = 'Record has been updated.';
 
+        // Move to stage 4
+        // Add deadline of 3 days for stage 4
         if($followed_up == 'yes' && $info->stage == 3) {
             $info->stage = 4;
+            $info->dead_line = $i->getDeadLine(3);
             $message = "Record has been updated. Congrats! The claimant is on <strong>stage 4</strong>.";
         }
 
@@ -138,7 +149,7 @@ class Info extends Model
         }
     }
 
-    public function processStage4(Request $request) {
+    public function processStage4(Info $i, Request $request) {
 
     	$info = Info::find($request->input('id'));
 
@@ -148,9 +159,14 @@ class Info extends Model
 
         $message = 'Record has been updated.';
 
+        // Move to stage 0
+        // Mark the last deadline to now/today to recognize 15 working days
+        // Calculate difference from first to last deadline dates
         if($check_released == 'yes' && $info->stage == 4) {
             $info->stage = 0;
             $info->claim_status = 'approved';
+            $info->l_deadline = \Carbon\Carbon::now('Asia/Manila');
+            $info->days_accomplished = $i->getDeadLineDifference($i, $info->f_deadline, $info->l_deadline);
             $message = "Record has been updated. Congrats! The claimant has finished the new GIBX claim process.";
         }
 
@@ -161,12 +177,12 @@ class Info extends Model
         }
     }
 
-    public function getDeadLine()
+    public function getDeadLine($deadline)
     {
         // Stage has been triggered. Get date/time now.
         $today = Carbon::now('Asia/Manila');
 
-        $m = 0;
+        $c = 0;
 
         while(true){
 
@@ -175,17 +191,32 @@ class Info extends Model
 
             // Check if the day is either Sat or Sun, if yes, adjust the day by one(1).
             if($today->dayOfWeek == Carbon::SATURDAY || $today->dayOfWeek == Carbon::SUNDAY) {
-                $m -= 1;
+                $c -= 1;
             }
 
-            $m += 1;
+            $c += 1;
 
-            // Max days per stage is 3.
-            //TODO: Check if STAGE == 3, if yes, adjust 3 to 4.
-            if($m == 3) break;
+            if($c == $deadline) break;
         }
 
         return $today;
-//        return $today->format('m/d/Y h:i A');
+    }
+
+    public function getDeadLineDifference(Info $info, Carbon $f_deadline, Carbon $l_deadline)
+    {
+        // Get first and last deadlines difference in days
+        $days = $f_deadline->diffInDays($l_deadline);
+        $c = 0;
+
+        for($m = 0; $m < $days; $m++){
+            $current = $f_deadline->addDay(1);
+
+            // If the day after first deadline is not Saturday or Sunday, count as 1 working day
+            if($current->dayOfWeek != Carbon::SATURDAY && $current->dayOfWeek != Carbon::SUNDAY){
+                $c += 1;
+            }
+        }
+
+        return $c;
     }
 }

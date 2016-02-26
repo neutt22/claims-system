@@ -129,17 +129,20 @@ class HomeController extends Controller
         $info->followed_up = 'no';
         $info->check_released = 'no';
 
-        // If the documents are complete, move to stage 2.
+        // If the documents are complete, move to stage 2
+        // Add deadline of 3 days for stage 2
+        // Mark the first deadline to now/today to recognize 15 working days
         if($this->request->input('docs') == 'complete'){
             $info->stage = 2;
+            $info->dead_line = $info->getDeadLine(3);
+            $info->f_deadline = \Carbon\Carbon::now('Asia/Manila');
         }
         // Else, stay in the stage 1.
+        // Add deadline of 5 days for stage 1 (customer followup)
         else{
             $info->stage = 1;
+            $info->dead_line = $info->getDeadLine(5);
         }
-
-        // Deadline for Mich and Client is 15 days
-        $info->dead_line = $info->getDeadLine();
 
         if( $info->save() ) {
             return view('new_record')->with('message', 'New item has been recorded.');
@@ -172,13 +175,13 @@ class HomeController extends Controller
                 'inception' => 'required',
             ]);
 
-            return $i->processStage1($this->request);
+            return $i->processStage1($i, $this->request);
         }else if($stage == 2) {
-            return $i->processStage2($this->request);
+            return $i->processStage2($i, $this->request);
         }else if($stage == 3) {
-            return $i->processStage3($this->request);
+            return $i->processStage3($i, $this->request);
         }else if($stage == 4) {
-            return $i->processStage4($this->request);
+            return $i->processStage4($i, $this->request);
         }else {
             return redirect()->route('home');
         }
