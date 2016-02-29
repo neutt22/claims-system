@@ -223,10 +223,19 @@ class Info extends Model
     public function isDeadLineToday(Carbon $deadline)
     {
         $today = Carbon::now('Asia/Manila');
-        if($deadline->diffInDays($today) == 0){
-            return true;
-        }else{
-            return false;
+//        return $deadline->diffInDays($today); // Determines whether its on deadline or warning (1 day prior)
+
+        // If today is greater than or equal to its deadline, then its his/her deadline
+        if($today->gte($deadline)){
+            return 'deadline';
         }
+
+        // Issue a warning if today's days difference is 0 with the deadline
+        // TODO: Implement the warning feature later
+//        if($today->diffInDays($deadline) == 0){
+//            return 'warning';
+//        }
+
+        return 'pending';
     }
 }
