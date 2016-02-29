@@ -33,7 +33,11 @@
         <hr>
         <div>
             @foreach( $deadline_names as $deadline_name)
-              <span class="claimant-notif"><a href="/edit?id={{ $deadline_name->id }}">{{ $deadline_name->claimant }}</a></span>
+              @if( $deadline_name->stage == 1)
+                <span class="claimant-notif-orange"><a href="/edit?id={{ $deadline_name->id }}">{{ $deadline_name->claimant }}: {{ $deadline_name->contact }}</a></span>
+              @else
+                <span class="claimant-notif"><a href="/edit?id={{ $deadline_name->id }}">{{ $deadline_name->claimant }}</a></span>
+              @endif
             @endforeach
         </div>
       </div>

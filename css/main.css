@@ -98,13 +98,14 @@ h3 {
 }
 
 /* DEADLINE NOTIFICATION HOME  ===================================*/
-/* line 97, ../sass/main.scss */
+/* line 99, ../sass/main.scss */
 .deadline-notif-container {
   background: rgba(255, 0, 0, 0.26);
   border: 1px solid rgba(255, 0, 0, 0.63);
   padding: 5px;
+  margin: 55px 0 50px 0;
 }
-/* line 102, ../sass/main.scss */
+/* line 105, ../sass/main.scss */
 .deadline-notif-container .counter .title {
   font-size: 20px;
   font-weight: bold;
@@ -113,7 +114,7 @@ h3 {
   line-height: 28px;
   margin: 0;
 }
-/* line 110, ../sass/main.scss */
+/* line 113, ../sass/main.scss */
 .deadline-notif-container .counter .deadline-badge {
   font-size: 15px;
   color: floralwhite;
@@ -123,12 +124,12 @@ h3 {
   border-radius: 50%;
   padding: 5px;
 }
-/* line 118, ../sass/main.scss */
+/* line 121, ../sass/main.scss */
 .deadline-notif-container h2 {
   color: rgba(255, 0, 0, 0.58);
   margin: 3px 0;
 }
-/* line 122, ../sass/main.scss */
+/* line 125, ../sass/main.scss */
 .deadline-notif-container h4 {
   font-weight: normal;
   font-family: Arial, 'Lato';
@@ -136,17 +137,17 @@ h3 {
   margin: 0 0 6px 0;
   color: #404040;
 }
-/* line 129, ../sass/main.scss */
+/* line 132, ../sass/main.scss */
 .deadline-notif-container hr {
   border-top: 1px solid rgba(255, 0, 0, 0.26);
 }
-/* line 132, ../sass/main.scss */
+/* line 135, ../sass/main.scss */
 .deadline-notif-container div {
   overflow: hidden;
   color: #c33c3a;
   font-size: 12px;
 }
-/* line 137, ../sass/main.scss */
+/* line 140, ../sass/main.scss */
 .deadline-notif-container div span {
   background: rgba(255, 0, 0, 0.26);
   border: 1px solid rgba(255, 0, 0, 0.26);
@@ -157,40 +158,47 @@ h3 {
   margin: 2px;
   float: left;
 }
-/* line 144, ../sass/main.scss */
+/* line 147, ../sass/main.scss */
 .deadline-notif-container div span:hover {
   background: rgba(255, 0, 0, 0.42);
 }
-/* line 147, ../sass/main.scss */
+/* line 150, ../sass/main.scss */
 .deadline-notif-container div span a {
   color: inherit;
   text-decoration: none;
 }
-/* line 150, ../sass/main.scss */
+/* line 153, ../sass/main.scss */
 .deadline-notif-container div span a:hover {
   color: #ffbcb9;
 }
 
+/* line 161, ../sass/main.scss */
+.claimant-notif-orange {
+  color: #714C0B;
+  background: rgba(241, 153, 17, 0.74) !important;
+  border: 1px solid #9F762B !important;
+}
+
 /* TABLE ===================================*/
-/* line 159, ../sass/main.scss */
+/* line 169, ../sass/main.scss */
 .tr-claim-error {
   color: #8d4040;
   background: #E9B6B6;
 }
 
-/* line 164, ../sass/main.scss */
+/* line 174, ../sass/main.scss */
 .tr-claim-approved {
   color: #235420;
   background: #83ED84;
 }
 
-/* line 169, ../sass/main.scss */
+/* line 179, ../sass/main.scss */
 .tr-claim-warning {
   color: #978738;
   background: #eddd44;
 }
 
-/* line 174, ../sass/main.scss */
+/* line 184, ../sass/main.scss */
 th {
   text-align: left;
   padding: 5px;
@@ -202,7 +210,7 @@ th {
   cursor: pointer;
 }
 
-/* line 187, ../sass/main.scss */
+/* line 197, ../sass/main.scss */
 td {
   padding: 2px 0;
   font-family: Arial, Verdana, sans-serif;
@@ -211,34 +219,34 @@ td {
   cursor: pointer;
 }
 
-/* line 196, ../sass/main.scss */
+/* line 206, ../sass/main.scss */
 .td-action {
   text-align: center;
 }
 
-/* line 205, ../sass/main.scss */
+/* line 215, ../sass/main.scss */
 tbody tr:hover {
   background: #cce6ff;
 }
 
-/* line 209, ../sass/main.scss */
+/* line 219, ../sass/main.scss */
 table {
   margin: 10px 0;
   border-collapse: collapse;
   color: #404040;
 }
 
-/* line 215, ../sass/main.scss */
+/* line 225, ../sass/main.scss */
 .upd-button {
   color: #004c99;
 }
-/* line 217, ../sass/main.scss */
+/* line 227, ../sass/main.scss */
 .upd-button:hover {
   color: #2ea8ff;
 }
 
 /* BUTTON ===================================*/
-/* line 224, ../sass/main.scss */
+/* line 234, ../sass/main.scss */
 .button {
   outline: none;
   color: white;
@@ -248,24 +256,24 @@ table {
   text-decoration: none;
 }
 
-/* line 233, ../sass/main.scss */
+/* line 243, ../sass/main.scss */
 .button:hover {
   background: #004c99;
 }
 
-/* line 237, ../sass/main.scss */
+/* line 247, ../sass/main.scss */
 small {
   color: #666666;
 }
 
-/* line 241, ../sass/main.scss */
+/* line 251, ../sass/main.scss */
 a#new-record {
   float: right;
   font-size: 14px;
 }
 
 /* STAGE HEAD ===================================*/
-/* line 247, ../sass/main.scss */
+/* line 257, ../sass/main.scss */
 .stage-head {
   border-left: 3px solid #0066cc;
   padding-left: 5px;
@@ -279,28 +287,28 @@ a#new-record {
 }
 
 /* STAGE 1 FORM ===================================*/
-/* line 262, ../sass/main.scss */
+/* line 272, ../sass/main.scss */
 .req {
   border: 1px solid #ffb3b3;
 }
 
-/* line 266, ../sass/main.scss */
+/* line 276, ../sass/main.scss */
 form {
   color: #404040;
 }
 
-/* line 270, ../sass/main.scss */
+/* line 280, ../sass/main.scss */
 form#stage-1 input {
   margin-bottom: 10px;
   display: block;
 }
-/* line 273, ../sass/main.scss */
+/* line 283, ../sass/main.scss */
 form#stage-1 input label {
   font-size: 15px;
   cursor: pointer;
 }
 
-/* line 279, ../sass/main.scss */
+/* line 289, ../sass/main.scss */
 form#stage-1 input[type='checkbox'] {
   display: inline-block;
   vertical-align: middle;
@@ -309,12 +317,12 @@ form#stage-1 input[type='checkbox'] {
   *display: inline;
 }
 
-/* line 283, ../sass/main.scss */
+/* line 293, ../sass/main.scss */
 form#stage-1 select {
   margin-bottom: 10px;
 }
 
-/* line 287, ../sass/main.scss */
+/* line 297, ../sass/main.scss */
 form#stage-1 > textarea, #stage-3 textarea {
   display: block;
   margin-bottom: 10px;
@@ -322,7 +330,7 @@ form#stage-1 > textarea, #stage-3 textarea {
   width: 300px;
 }
 
-/* line 294, ../sass/main.scss */
+/* line 304, ../sass/main.scss */
 form#stage-1 span, #stage-2 span, #stage-3 span, #stage-4 span {
   display: inline-block;
   vertical-align: middle;
@@ -333,7 +341,7 @@ form#stage-1 span, #stage-2 span, #stage-3 span, #stage-4 span {
   font-size: 15px;
 }
 
-/* line 300, ../sass/main.scss */
+/* line 310, ../sass/main.scss */
 form#stage-1 input[type='submit'], #stage-2 input[type='submit'],
 form#stage-3 input[type='submit'], #stage-4 input[type='submit'] {
   display: inline-block;
@@ -344,14 +352,14 @@ form#stage-3 input[type='submit'], #stage-4 input[type='submit'] {
   margin-right: 30px;
 }
 
-/* line 306, ../sass/main.scss */
+/* line 316, ../sass/main.scss */
 form#stage-1 > a {
   /*text-decoration: none;*/
   font-size: 15px;
 }
 
 /* MESSAGES ===================================*/
-/* line 323, ../sass/main.scss */
+/* line 333, ../sass/main.scss */
 .error {
   background: #ffebcc;
   border: 2px solid #ffd633;
@@ -364,7 +372,7 @@ form#stage-1 > a {
   width: 30%;
 }
 
-/* line 327, ../sass/main.scss */
+/* line 337, ../sass/main.scss */
 .success {
   background: #99ff99;
   border: 2px solid #00e600;
@@ -377,7 +385,7 @@ form#stage-1 > a {
   width: 30%;
 }
 
-/* line 331, ../sass/main.scss */
+/* line 341, ../sass/main.scss */
 .tips {
   background: #e6f2ff;
   border: 2px solid #80bfff;
@@ -392,7 +400,7 @@ form#stage-1 > a {
   width: 100%;
   overflow: auto;
 }
-/* line 336, ../sass/main.scss */
+/* line 346, ../sass/main.scss */
 .tips img {
   width: 17%;
   -moz-border-radius: 50%;
@@ -402,7 +410,7 @@ form#stage-1 > a {
 }
 
 /* UPDATE CONTAINER ===================================*/
-/* line 345, ../sass/main.scss */
+/* line 355, ../sass/main.scss */
 .update-container {
   float: left;
   width: 50%;
@@ -410,24 +418,24 @@ form#stage-1 > a {
 }
 
 /* RIGHT BORDER */
-/* line 352, ../sass/main.scss */
+/* line 362, ../sass/main.scss */
 .rb {
   border-left: 1px solid grey;
 }
-/* line 354, ../sass/main.scss */
+/* line 364, ../sass/main.scss */
 .rb .info h2 {
   margin-bottom: 0;
   color: darkgrey;
 }
 
 /* REPORT CONTAINER ===================================*/
-/* line 362, ../sass/main.scss */
+/* line 372, ../sass/main.scss */
 .report-container {
   width: 1100px;
   margin: 0 auto;
   padding: 3em;
 }
-/* line 366, ../sass/main.scss */
+/* line 376, ../sass/main.scss */
 .report-container .report-head {
   border-left: 3px solid #0066cc;
   padding-left: 5px;
@@ -439,14 +447,14 @@ form#stage-1 > a {
   height: 30px;
   margin-bottom: 10px;
 }
-/* line 377, ../sass/main.scss */
+/* line 387, ../sass/main.scss */
 .report-container .report-item h2 {
   color: darkgrey;
   margin-bottom: 3px;
   font-family: Arial;
   display: inline-block;
 }
-/* line 383, ../sass/main.scss */
+/* line 393, ../sass/main.scss */
 .report-container span {
   font-size: 18px;
   color: whitesmoke;
@@ -454,13 +462,13 @@ form#stage-1 > a {
   background: rgba(255, 0, 0, 0.67);
 }
 
-/* line 391, ../sass/main.scss */
+/* line 401, ../sass/main.scss */
 .good {
   background: rgba(0, 128, 0, 0.76) !important;
 }
 
 /* LOGIN FORM ===================================*/
-/* line 396, ../sass/main.scss */
+/* line 406, ../sass/main.scss */
 .login-container {
   position: absolute;
   top: 0;
@@ -475,25 +483,25 @@ form#stage-1 > a {
   padding: 10px;
   padding-top: 40px;
 }
-/* line 409, ../sass/main.scss */
+/* line 419, ../sass/main.scss */
 .login-container img {
   width: 30%;
   position: absolute;
 }
-/* line 413, ../sass/main.scss */
+/* line 423, ../sass/main.scss */
 .login-container h4 {
   text-align: center;
   font-family: 'Lato', sans-serif;
   font-weight: 300;
 }
-/* line 418, ../sass/main.scss */
+/* line 428, ../sass/main.scss */
 .login-container form {
   display: block;
   width: 80%;
   margin: 0 auto;
   margin-top: 40px;
 }
-/* line 424, ../sass/main.scss */
+/* line 434, ../sass/main.scss */
 .login-container input {
   outline: none;
   display: block;
@@ -503,16 +511,16 @@ form#stage-1 > a {
 }
 
 /* SEARCH BOX ===================================*/
-/* line 435, ../sass/main.scss */
+/* line 445, ../sass/main.scss */
 .q-result {
   color: #3C3B3B;
 }
 
-/* line 439, ../sass/main.scss */
+/* line 449, ../sass/main.scss */
 .search-wrapper {
   width: 260px;
 }
-/* line 440, ../sass/main.scss */
+/* line 450, ../sass/main.scss */
 .search-wrapper > label {
   display: inline-block;
   vertical-align: middle;
@@ -521,19 +529,19 @@ form#stage-1 > a {
   *display: inline;
   width: 20%;
 }
-/* line 445, ../sass/main.scss */
+/* line 455, ../sass/main.scss */
 .search-wrapper div:nth-child(3) {
   position: relative;
   margin-top: 1px;
   text-align: right;
   font-size: 11px;
 }
-/* line 450, ../sass/main.scss */
+/* line 460, ../sass/main.scss */
 .search-wrapper div:nth-child(3) button {
   color: #404040;
   text-decoration: underline;
 }
-/* line 454, ../sass/main.scss */
+/* line 464, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm {
   display: none;
   position: absolute;
@@ -544,21 +552,21 @@ form#stage-1 > a {
   border: 1px solid #d9d9d9;
   background: rgba(242, 242, 242, 0.93);
 }
-/* line 463, ../sass/main.scss */
+/* line 473, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm hr {
   color: #404040;
   border-top: 1px solid silver;
 }
-/* line 467, ../sass/main.scss */
+/* line 477, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm form .button {
   float: right;
 }
-/* line 470, ../sass/main.scss */
+/* line 480, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm .adv-element {
   width: 100%;
   margin: 15px 0;
 }
-/* line 473, ../sass/main.scss */
+/* line 483, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm .adv-element .adv-1st-col {
   display: inline-block;
   vertical-align: middle;
@@ -568,7 +576,7 @@ form#stage-1 > a {
   width: 35%;
   text-align: left;
 }
-/* line 478, ../sass/main.scss */
+/* line 488, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm .adv-element .adv-2nd-col {
   background: yellow;
   display: inline-block;
@@ -579,16 +587,16 @@ form#stage-1 > a {
   width: 64%;
   text-align: right;
 }
-/* line 483, ../sass/main.scss */
+/* line 493, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm .adv-element .adv-2nd-col input, .search-wrapper div:nth-child(3) .assm .adv-element .adv-2nd-col select {
   width: 100%;
 }
-/* line 488, ../sass/main.scss */
+/* line 498, ../sass/main.scss */
 .search-wrapper div:nth-child(3) .assm h2, .search-wrapper div:nth-child(3) .assm h3, .search-wrapper div:nth-child(3) .assm h4 {
   margin: 0 0 15px 0;
   color: #404040;
 }
-/* line 494, ../sass/main.scss */
+/* line 504, ../sass/main.scss */
 .search-wrapper .search-box {
   display: inline-block;
   vertical-align: middle;
@@ -602,12 +610,12 @@ form#stage-1 > a {
   position: relative;
   right: -9px;
 }
-/* line 502, ../sass/main.scss */
+/* line 512, ../sass/main.scss */
 .search-wrapper .search-box input {
   outline: none;
   border: 0px;
 }
-/* line 506, ../sass/main.scss */
+/* line 516, ../sass/main.scss */
 .search-wrapper .search-box img {
   position: absolute;
   width: 20px;
@@ -616,13 +624,13 @@ form#stage-1 > a {
 }
 
 /* QUICK EXPORT BUTTON ===================================*/
-/* line 517, ../sass/main.scss */
+/* line 527, ../sass/main.scss */
 .qeb {
   font-size: 11px;
 }
 
 /* TEXT STATUS ===================================*/
-/* line 523, ../sass/main.scss */
+/* line 533, ../sass/main.scss */
 .claims-stat {
   display: inline-block;
   vertical-align: middle;
@@ -635,22 +643,22 @@ form#stage-1 > a {
   width: 80%;
   text-align: center;
 }
-/* line 530, ../sass/main.scss */
+/* line 540, ../sass/main.scss */
 .claims-stat .total-claims-pending, .claims-stat .total-claims, .claims-stat .total-claims-approved {
   display: inline-block;
   margin: auto 30px;
 }
-/* line 533, ../sass/main.scss */
+/* line 543, ../sass/main.scss */
 .claims-stat .total-claims-pending h4, .claims-stat .total-claims h4, .claims-stat .total-claims-approved h4 {
   margin-top: 0;
 }
-/* line 536, ../sass/main.scss */
+/* line 546, ../sass/main.scss */
 .claims-stat .total-claims-pending span, .claims-stat .total-claims span, .claims-stat .total-claims-approved span {
   font-size: 2em;
 }
 
 /* SORT BY ===================================*/
-/* line 544, ../sass/main.scss */
+/* line 554, ../sass/main.scss */
 .sort-by {
   float: right;
   text-align: center;
@@ -659,11 +667,11 @@ form#stage-1 > a {
   list-style: none;
   font-size: 13px;
 }
-/* line 551, ../sass/main.scss */
+/* line 561, ../sass/main.scss */
 .sort-by li:hover .sort-by-menu {
   display: block;
 }
-/* line 554, ../sass/main.scss */
+/* line 564, ../sass/main.scss */
 .sort-by li span {
   display: inline-block;
   vertical-align: middle;
@@ -672,7 +680,7 @@ form#stage-1 > a {
   *display: inline;
   color: blue;
 }
-/* line 558, ../sass/main.scss */
+/* line 568, ../sass/main.scss */
 .sort-by .sort-by-menu {
   position: absolute;
   display: none;
@@ -680,7 +688,7 @@ form#stage-1 > a {
   padding: 0;
   border: 1px solid #d9d9d9;
 }
-/* line 564, ../sass/main.scss */
+/* line 574, ../sass/main.scss */
 .sort-by .sort-by-menu li a, .sort-by .sort-by-menu li label {
   display: block;
   text-decoration: none;
@@ -689,21 +697,21 @@ form#stage-1 > a {
   padding: 4px 10px;
   border-bottom: 1px solid #d9d9d9;
 }
-/* line 572, ../sass/main.scss */
+/* line 582, ../sass/main.scss */
 .sort-by .sort-by-menu li a:hover, .sort-by .sort-by-menu li label:hover {
   color: #d9d9d9;
   background: #404040;
 }
 
 /* TOTAL ===================================*/
-/* line 582, ../sass/main.scss */
+/* line 592, ../sass/main.scss */
 .total-row {
   text-align: right;
   font-size: 14px;
 }
 
 /* FOOTER ===================================*/
-/* line 589, ../sass/main.scss */
+/* line 599, ../sass/main.scss */
 footer {
   background: #333333;
   color: whitesmoke;

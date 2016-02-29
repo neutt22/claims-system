@@ -94,10 +94,13 @@ h3 {
 
 /* DEADLINE NOTIFICATION HOME  ===================================*/
 
+
+
 .deadline-notif-container {
 	background: rgba(255, 0, 0, 0.26);
 	border: 1px solid rgba(255, 0, 0, 0.63);
 	padding: 5px;
+	margin: 55px 0 50px 0;
 	.counter {
 		.title {
 			font-size: 20px;
@@ -151,7 +154,14 @@ h3 {
 				color: #ffbcb9;
 			}
 		}
+
 	}
+}
+
+.claimant-notif-orange {
+	color: #714C0B;
+	background: rgba(241, 153, 17, 0.74) !important;
+	border: 1px solid #9F762B !important;
 }
 
 /* TABLE ===================================*/
