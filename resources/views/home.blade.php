@@ -125,6 +125,14 @@
                 </select>
               </div>
             </div>
+            <div class="adv-element">
+              <div class="adv-1st-col">
+                <label for="chk-tag"><input id="chk-tag" type="checkbox" name="chk-tag"> Has Tag: </label>
+              </div>
+              <div class="adv-2nd-col">
+                <input type="text" name="txt-tag" placeholder="tag name...">
+              </div>
+            </div>
 
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="hidden" name="adv" value="advanced">

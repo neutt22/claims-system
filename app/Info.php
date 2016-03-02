@@ -43,6 +43,10 @@ class Info extends Model
             $query->where('claim_status', 'like', '%' . $request->input('txt-status') . '%');
         }
 
+        if($request->input('chk-tag')){
+            $query->where('tag', 'like', '%' . $request->input('txt-tag') . '%');
+        }
+
 //        dd($query->get());
 
         return $query->get();
