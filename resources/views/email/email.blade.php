@@ -30,7 +30,6 @@
     </div>
     <div>
         <h5>List of Claimants Deadline Today</h5>
-        <h4>Sample Data Only ====================================</h4>
     </div>
     <table style="width:100%; border-collapse: collapse;">
         <thead>
