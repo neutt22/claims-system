@@ -242,7 +242,7 @@
                 </td>
               @else
                 <td class="td-action">
-                  <a href="/edit?id={{ $data->id }}" class="upd-button">View</a>
+                  <a href="/edit?id={{ $data->id }}" class="upd-button">Details</a>
                 </td>
               @endif
             </tr>
