@@ -10,10 +10,10 @@
 			<textarea name="followup_comments" placeholder="follow up status here...">{{ $info->followup_comments }}</textarea>
 			<label style="cursor: pointer;"><input type="checkbox" name="followed_up" value="yes" {{ $info->followed_up == 'yes' ? 'checked' : ''}}>Followed Up</label><br/>
 			<select name="stage_3_status">
-				<option value="pending" @if($info->stage_3_status == 'pending') 'selected' @endif>Pending</option>
-				<option value="approved" @if($info->stage_3_status == 'approved') 'selected' @endif>Approved</option>
-				<option value="denied" @if($info->stage_3_status == 'denied') 'selected' @endif>Denied</option>
-				<option value="closed"  @if($info->stage_3_status == 'closed') 'selected' @endif>Closed</option>
+				<option value="pending" @if($info->stage_3_status == 'pending') selected @endif>Pending</option>
+				<option value="allowed" @if($info->stage_3_status == 'allowed') selected @endif>Allowed</option>
+				<option value="denied" @if($info->stage_3_status == 'denied') selected @endif>Denied</option>
+				<option value="closed"  @if($info->stage_3_status == 'closed') selected @endif>Closed</option>
 			</select><br/>
 			{{--<span>{{ $info->stage_3_status }}</span>--}}
 			<label style="font-size: 12px; cursor: pointer; margin-top: 10px; display: inline-block;" for="datepicker2">Date:</label><br/>

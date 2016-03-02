@@ -192,7 +192,7 @@ class Info extends Model
 
         // Move to stage 4
         // Add deadline of 3 days for stage 4
-        if($info->stage_3_status == 'approved' && $info->stage == 3) {
+        if($info->stage_3_status == 'allowed' && $info->stage == 3) {
             $info->stage = 4;
             $info->dead_line = $i->getDeadLine(3);
             $message = "Record has been updated. Congrats! The claimant is on <strong>stage 4</strong>.";
