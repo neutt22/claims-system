@@ -108,6 +108,7 @@ class Info extends Model
         $info->name = $request->input('name');
         $info->claimant = $request->input('claimant');
         $info->coc = $request->input('coc');
+        $info->dependent = $request->input('dependent');
         $info->inception = \Carbon\Carbon::parse($request->input('inception'));
         $info->dm = $request->input('dm');
         $info->policy = $request->input('policy');

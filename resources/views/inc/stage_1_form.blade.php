@@ -10,6 +10,11 @@
 		<form id="stage-1" action="/edit" method="post">
 			<input type="text" name="name" placeholder="enter principal name..." value="{{ $info->name }}" />
 			<input type="text" name="claimant" placeholder="enter claimant name..." value="{{ $info->claimant }}" />
+			<select name="dependent">
+				<option value="principal" {{ ($info->dependent == 'principal') ? 'selected' : '' }}>Principal</option>
+				<option value="secondary" {{ ($info->dependent == 'secondary') ? 'selected' : '' }}>Secondary</option>
+				<option value="tertiary" {{ ($info->dependent == 'tertiary') ? 'selected' : '' }}>Tertiary</option>
+			</select>
 			<input type="text" name="coc" placeholder="enter coc name..." value="{{ $info->coc }}" />
 
 			<input type="text" name="inception" placeholder="enter inception date..." id="datepicker" value="{{ \Carbon\Carbon::parse($info->inception)->format('m/d/Y') }}">

@@ -27,6 +27,11 @@
 	<form id="stage-1" action="/new" method="post">
 		<input type="text" name="name" placeholder="enter principal name..." class="req" />
 		<input type="text" name="claimant" placeholder="enter claimant name..." class="req" />
+		<select name="dependent">
+			<option value="principal">Principal</option>
+			<option value="secondary">Secondary</option>
+			<option value="tertiary">Tertiary</option>
+		</select>
 		<input type="text" name="coc" placeholder="enter coc name..." class="req" />
 		<input type="text" name="inception" placeholder="enter inception date..." id="datepicker" class="req">
 		<input type="text" name="dm" placeholder="enter dm name..." />

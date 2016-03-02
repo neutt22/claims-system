@@ -64,6 +64,11 @@
 			<hr>
 		</div>
 		<div class="info">
+			<h2>Dependent</h2>
+			<span>{{ $info->dependent }}</span>
+			<hr>
+		</div>
+		<div class="info">
 			<h2>COC</h2>
 			<span>{{ $info->coc }}</span>
 			<hr>

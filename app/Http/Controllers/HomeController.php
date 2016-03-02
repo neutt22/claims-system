@@ -140,6 +140,7 @@ class HomeController extends Controller
         $info->name = $this->request->input('name');
         $info->claimant = $this->request->input('claimant');
         $info->coc = $this->request->input('coc');
+        $info->dependent = $this->request->input('dependent');
         $info->inception = \Carbon\Carbon::parse($this->request->input('inception'));
         $info->dm = $this->request->input('dm');
         $info->policy = $this->request->input('policy');
