@@ -187,5 +187,23 @@
 	        maxDate: new Date(2020, 12, 31),
 	        yearRange: [2000,2020]
 	    });
+		var picker2 = new Pikaday(
+				{
+					field: document.getElementById('datepicker2'),
+					format: 'MM/DD/YYYY',
+					firstDay: 1,
+					minDate: new Date(2000, 0, 1),
+					maxDate: new Date(2020, 12, 31),
+					yearRange: [2000,2020]
+		});
+		var picker3 = new Pikaday(
+				{
+					field: document.getElementById('datepicker3'),
+					format: 'MM/DD/YYYY',
+					firstDay: 1,
+					minDate: new Date(2000, 0, 1),
+					maxDate: new Date(2020, 12, 31),
+					yearRange: [2000,2020]
+		});
     </script>
 @stop

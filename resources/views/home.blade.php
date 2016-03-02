@@ -189,6 +189,7 @@
       <th>Deadline {{ $column == 'dead_line' ? $symbol : '' }}</th>
       <th>Status {{ $column == 'status' ? $symbol : '' }}</th>
       <th>Tag {{ $column == 'company' ? $symbol : '' }}</th>
+      <th>MICO Released</th>
       <th>Update</th>
       </thead>
       <tbody>
@@ -235,6 +236,9 @@
               </td>
               <td>
                 {{ $data->tag }}
+              </td>
+              <td>
+                {{ $data->stage_3_date->format('m/d/Y') }}
               </td>
               @if( $data->claim_status == 'pending')
                 <td class="td-action">

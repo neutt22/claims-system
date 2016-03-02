@@ -9,6 +9,16 @@
 		<form id="stage-3" action="/edit" method="post">
 			<textarea name="followup_comments" placeholder="follow up status here...">{{ $info->followup_comments }}</textarea>
 			<label style="cursor: pointer;"><input type="checkbox" name="followed_up" value="yes" {{ $info->followed_up == 'yes' ? 'checked' : ''}}>Followed Up</label><br/>
+			<select name="stage_3_status">
+				<option value="processing" {{ ($info->stage_3_status == 'processing') ? 'selected' : '' }}>Processing</option>
+				<option value="approved" {{ ($info->stage_3_status == 'approved') ? 'selected' : '' }}>Approved</option>
+				<option value="denied" {{ ($info->stage_3_status == 'denied') ? 'selected' : '' }}>Denied</option>
+				<option value="closed" {{ ($info->stage_3_status == 'closed') ? 'selected' : '' }}>Closed</option>
+			</select><br/>
+			<label style="font-size: 12px; cursor: pointer; margin-top: 10px; display: inline-block;" for="datepicker2">Date:</label><br/>
+			<input type="text" name="stage_3_date" placeholder="enter a date..." id="datepicker2" value="{{ \Carbon\Carbon::parse($info->stage_3_date)->format('m/d/Y') }}"><br/>
+			{{--<label style="font-size: 12px; cursor: pointer; margin-top: 10px; display: inline-block;" for="datepicker3">MICO Released:</label><br/>--}}
+			{{--<input type="text" placeholder="date released..." id="datepicker3" name="mico_released"><br/>--}}
 			<span><small>*please double check fields before submitting</small></span><br/>
 			<input type="hidden" name="id" value="{{ $info->id }}">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">

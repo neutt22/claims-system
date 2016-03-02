@@ -11,7 +11,7 @@ class Info extends Model
 {
     protected $fillable = array('name', 'claimant', 'coc');
 
-    protected $dates = ['encoded', 'inception', 'dead_line', 'f_deadline', 'l_deadline'];
+    protected $dates = ['encoded', 'inception', 'dead_line', 'f_deadline', 'l_deadline', 'stage_3_date', 'mico_released'];
 
     public function getAdvancedSearchModel(Request $request)
     {
@@ -178,12 +178,15 @@ class Info extends Model
 
     	$info->followup_comments = $followup_comments;
     	$info->followed_up = $followed_up;
+        $info->stage_3_status = $request->input('stage_3_status');
+        $info->stage_3_date = \Carbon\Carbon::parse($request->input('stage_3_date'));
+        $info->mico_released = \Carbon\Carbon::parse($request->input('mico_released'));
 
         $message = 'Record has been updated.';
 
         // Move to stage 4
         // Add deadline of 3 days for stage 4
-        if($followed_up == 'yes' && $info->stage == 3) {
+        if($info->stage_3_status == 'approved' && $info->stage == 3) {
             $info->stage = 4;
             $info->dead_line = $i->getDeadLine(3);
             $message = "Record has been updated. Congrats! The claimant is on <strong>stage 4</strong>.";
