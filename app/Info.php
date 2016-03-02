@@ -47,6 +47,11 @@ class Info extends Model
             $query->where('tag', 'like', '%' . $request->input('txt-tag') . '%');
         }
 
+        if($request->input('chk-released')){
+            $query->whereMonth('stage_3_date', '=', $request->input('txt-released-month'));
+            $query->whereYear('stage_3_date', '=', $request->input('txt-released-year'));
+        }
+
 //        dd($query->get());
 
         return $query->get();

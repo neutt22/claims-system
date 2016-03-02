@@ -133,6 +133,25 @@
                 <input type="text" name="txt-tag" placeholder="tag name...">
               </div>
             </div>
+            <div class="adv-element">
+              <div class="adv-1st-col">
+                <label for="chk-released"><input id="chk-released" type="checkbox" name="chk-released"> Date Released: </label>
+              </div>
+              <div class="adv-2nd-col" style="text-align: left; background: none;">
+                <span>Month:</span>
+                <select name="txt-released-month" id="status-released-month" style="width: 30%;">
+                  @for($m = 1; $m <= 12; $m++)
+                    <option value="{{ $m }}">{{ $m }}</option>
+                  @endfor
+                </select>
+                <span>Year:</span>
+                <select name="txt-released-year" id="status-released-year" style="width: 30%;">
+                  @for($m = 2013; $m <= \Carbon\Carbon::today('Asia/Manila')->year; $m++)
+                    <option value="{{ $m }}">{{ $m }}</option>
+                  @endfor
+                </select>
+              </div>
+            </div>
 
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
             <input type="hidden" name="adv" value="advanced">
