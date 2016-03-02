@@ -37,6 +37,7 @@
 			<input type="text" name="contact" placeholder="contact no." value="{{ $info->contact }}"/>
 			<input type="text" name="area" placeholder="area" value="{{ $info->area }}"/>
 			<input type="text" name="tag" placeholder="enter tag or company name" value="{{ $info->tag }}"/>
+			<input type="text" name="insurer" placeholder="enter insurer name" value="{{ $info->insurer }}"/>
 			<input type="text" name="amount" placeholder="enter claim amount"  value="{{ $info->amount }}"/>
 			<span><small>*please double check fields before submitting</small></span><br/>
 			<input type="hidden" name="id" value="{{ $info->id }}">

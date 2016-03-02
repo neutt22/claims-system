@@ -48,6 +48,7 @@
 		<span>Encoded: <small>{{ \Carbon\Carbon::now('Asia/Manila')->format('m/d/Y h:i A') }} </small></span>
 
 		<input type="text" name="tag" placeholder="enter tag or company name" />
+		<input type="text" name="insurer" placeholder="enter insurer name" />
 		<input type="text" name="nature_of_claim" placeholder="nature of claim" />
 		<input type="text" name="type_of_sickness" placeholder="type of sickness" />
 		<input type="text" name="hospital" placeholder="hospital" />

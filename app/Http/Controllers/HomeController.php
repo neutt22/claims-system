@@ -153,6 +153,7 @@ class HomeController extends Controller
         $info->contact = $this->request->input('contact');
         $info->area = $this->request->input('area');
         $info->tag = $this->request->input('tag');
+        $info->insurer = $this->request->input('insurer');
         $info->amount = $this->request->input('amount');
         $info->claim_status = 'pending';
         $info->scanned = 'no';

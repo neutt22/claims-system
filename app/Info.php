@@ -120,6 +120,7 @@ class Info extends Model
         $info->contact = $request->input('contact');
         $info->area = $request->input('area');
         $info->tag = $request->input('tag');
+        $info->insurer = $request->input('insurer');
         $info->amount = $request->input('amount');
 
         $message = 'Record has been updated.';
