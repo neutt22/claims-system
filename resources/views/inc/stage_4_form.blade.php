@@ -11,6 +11,7 @@
 
 		<form id="stage-3" action="/edit" method="post">
 			<label style="cursor: pointer;"><input type="checkbox" name="released" value="yes" {{ $info->check_released == 'yes' ? 'checked' : ''}}>Check Released</label><br>
+			<input type="text" name="track_no" value="{{ $info->track_no }}" placeholder="track no."><br>
 			<span><small>*please double check fields before submitting</small></span><br/>
 			<input type="hidden" name="id" value="{{ $info->id }}">
 			<input type="hidden" name="_token" value="{{ csrf_token() }}">

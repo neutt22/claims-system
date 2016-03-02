@@ -202,6 +202,7 @@ class Info extends Model
     	$check_released = is_null($request->input('released')) ? 'no' : 'yes';
 
     	$info->check_released = $check_released;
+        $info->track_no = $request->input('track_no');
 
         $message = 'Record has been updated.';
 
