@@ -22,7 +22,7 @@
           <li><a class="hint--left" data-hint="I hate to see you go." href="/logout">Log Out</a></li>
         </ul>
       </div>
-      <h3>Claims System v.1.0</h3>
+      <h3>Claims System v.1.1</h3>
     </div>
 
     @if( count($deadline_names) > 0)
