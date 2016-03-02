@@ -10,7 +10,7 @@
 			<textarea name="followup_comments" placeholder="follow up status here...">{{ $info->followup_comments }}</textarea>
 			<label style="cursor: pointer;"><input type="checkbox" name="followed_up" value="yes" {{ $info->followed_up == 'yes' ? 'checked' : ''}}>Followed Up</label><br/>
 			<select name="stage_3_status">
-				<option value="processing" {{ ($info->stage_3_status == 'processing') ? 'selected' : '' }}>Processing</option>
+				<option value="pending" {{ ($info->stage_3_status == 'pending') ? 'selected' : '' }}>Pending</option>
 				<option value="approved" {{ ($info->stage_3_status == 'approved') ? 'selected' : '' }}>Approved</option>
 				<option value="denied" {{ ($info->stage_3_status == 'denied') ? 'selected' : '' }}>Denied</option>
 				<option value="closed" {{ ($info->stage_3_status == 'closed') ? 'selected' : '' }}>Closed</option>

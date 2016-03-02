@@ -179,6 +179,7 @@ class Info extends Model
     	$info->followup_comments = $followup_comments;
     	$info->followed_up = $followed_up;
         $info->stage_3_status = $request->input('stage_3_status');
+        $info->claim_status = $request->input('stage_3_status');
         $info->stage_3_date = \Carbon\Carbon::parse($request->input('stage_3_date'));
         $info->mico_released = \Carbon\Carbon::parse($request->input('mico_released'));
 
